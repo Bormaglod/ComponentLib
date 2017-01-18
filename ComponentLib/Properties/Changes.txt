@@ -1,0 +1,31 @@
+﻿Версия 1.0.
+- Целевая платформа изменена на .NET Framework 4.6.1
+
+Версия 1.0.6156.* (08.11.2016)
+- Косметические изменения в EmptyLanguageNode
+- Изменения в Cultures
+    * в методах FillCountriesCollection заменен тип параметра с ComboBox.ObjectCollection на IList
+- Изменения в Culture
+    * Свойства Name, Locale, Id заменены на автосвойства
+- Изменения в Check
+    * преобразован в static
+
+Версия 1.0.6155.* (07.11.2016)
+
+- Изменения в UnicodeDescrption
+    * метод MoveToNextCode => private
+    * метод ReadCode => private
+    * метод ReadContent => private
+    * убран конструктор по умолчанию
+    * добавлен конструктор считывающий информацию и символе из файла
+    * Добавлен класс CodeNotFoundException
+- Косметические изменения в MemLanguageNode
+- Косметические изменения в LanguageNode
+
+Версия 1.0.1.0 (11.03.2012)
+
+- Исправлены мелкие ошибки
+
+Версия 1.0.0.0 (24.09.2009)
+
+- Создание сборки

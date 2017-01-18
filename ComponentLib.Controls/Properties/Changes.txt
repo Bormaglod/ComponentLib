@@ -1,0 +1,92 @@
+﻿Версия 2.0.5963.33606 (29.04.2016)
+- Изменения
+  * При добавлении изображения в ImageBox, файл изображения блокировался до выхода из программы. Решено.
+
+Версия 2.0.5956.16080 (22.04.2016)
+- Изменения
+  * в ImageBox теперь функционирует кнопка добавления и удаления
+- Добавлен
+  * ImageCollection
+
+Версия 2.0.20.0 (02.01.2015)
+
+- Косметические изменения в классах
+  * UnicodeView
+  * UnicodeType
+  * UnicodeCategory
+  * UnicodeCollection
+  * OutlookBar
+  * ImageBox
+  * ButtonArrows
+  * TextEdit
+  * Events\SelectedChangedEventArgs
+  * Design\UnicodeCategoryConverter
+  * Design\UnicodeTypeConverter
+  * Design\TreeViewColumnsDesigner
+  * Design\StringCollectionConverter
+  * Design\RadioBoxCollectionEditor
+  * Design\FormStringCollection
+  * Design\StringCollectionEditor
+  
+- Изменения
+  * TreeNodeColumn: теперь наследуется от TreeNode
+  * TreeViewColumns: изменен для отображения TreeNodeColumn
+  * TextBoxNumber: добавлены события ValueChanged, ValueChecking
+  * Design\UnicodeCategoryConverter: теперь в ComponentLib.Controls.Design
+  * Design\UnicodeTypeConverter: теперь в ComponentLib.Controls.Design
+  * SelectedChangedEventArgs: перенесен в папку Events
+  * ButtonArrowClickEventArgs: перенесен в папку Events
+  * Events\ButtonSelectEventArgs: вынесен из OutlookBar.cs
+  * Events\ButtonClickEventArgs: вынесен из OutlookBar.cs
+  * OutlookBarButtons: вынесен из OutlookBar.cs
+  * OutlookBarButton: вынесен из OutlookBar.cs
+  * RadioBoxCollection: изменено наследования с IList<string> на CollectionBase
+  * RadioBox: исправлены некоторые ошибки
+  
+- Добавлен
+  * Series
+  * SeriesList
+  * PieGraph
+  * LabelLinkImage
+  * TextMixed
+  * Commands
+  * Events\SelectSeriesEventArgs
+  * Events\ValueEventArgs
+  * NetComponents\GradientColor
+  * NetComponents\NetTabPageEventArgs
+  * NetComponents\NetPageSelectedEventArgs
+  * NetComponents\NetTabPageCollection
+  * NetComponents\NetTabButton
+  * NetComponents\NetTabControl
+  * NetComponents\NetTabPage
+  * NetComponents\Design\GradientColorConverter
+  * NetComponents\Design\NetTabPageDesigner
+  
+- Удален
+  * TextEditLabel
+
+Версия 1.4.0.0 (08.04.2013)
+
+- Добавлены компоненты CornerBlow, DropDownControl, TreeGridView, PieGraph, TextMixed
+
+Версия 1.3.0.0 (19.11.2012)
+
+- Добавлены компоненты GlowBox и GlowGroupBox
+- Компонент OutlookGrid и сопутствующие классы перенесены в ComponentLib.Controls.ThirdParty.OutlookStyle
+
+Версия 1.2.0.0 (17.11.2012)
+
+- TreeViewColumnsDesigner, UnicodeCategryConverter, UnicodeTypeConverter перенесены в ComponentLib.Controls.Design
+- Добавлен компонент LoadingCircle
+
+Версия 1.1.1.0 (27.10.2012)
+
+- Исправления в RadioBox
+
+Версия 1.1.0.0 (18.10.2012)
+
+- Добавлен RadioBox, RadioBoxCollection, FormStringCollection, RadioBoxCollectionEditor, StringCollectionEditor
+
+Версия 1.0.2.0 (27.05.2012)
+
+- Стабильная версия

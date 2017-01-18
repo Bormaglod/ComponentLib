@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{B45ADB28-2EB3-4CFA-B240-82D8F58BEB22}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ComponentLib.Controls</RootNamespace>
+    <AssemblyName>ComponentLib.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>ComponentLib.Controls.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>False</DelaySign>
+    <AssemblyOriginatorKeyMode>File</AssemblyOriginatorKeyMode>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>x86</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>Full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>None</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ButtonArrows.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Commands.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Design\FormStringCollection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Design\FormStringCollection.Designer.cs">
+      <DependentUpon>FormStringCollection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\RadioBoxCollectionEditor.cs" />
+    <Compile Include="Design\StringCollectionConverter.cs" />
+    <Compile Include="Design\StringCollectionEditor.cs" />
+    <Compile Include="Design\TreeViewColumnsDesigner.cs" />
+    <Compile Include="Design\UnicodeCategoryConverter.cs" />
+    <Compile Include="Design\UnicodeTypeConverter.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Events\ButtonArrowClickEventArgs.cs" />
+    <Compile Include="Events\ButtonClickEventArgs.cs" />
+    <Compile Include="Events\ButtonSelectEventArgs.cs" />
+    <Compile Include="Events\SelectedChangedEventArgs.cs" />
+    <Compile Include="Events\SelectSeriesEventArgs.cs" />
+    <Compile Include="Events\StringRequestEventArgs.cs" />
+    <Compile Include="Events\ValueEventArgs.cs" />
+    <Compile Include="ImageBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImageBox.Designer.cs">
+      <DependentUpon>ImageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageCollection.cs" />
+    <Compile Include="LabelLinkImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LabelLinkImage.Designer.cs">
+      <DependentUpon>LabelLinkImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NetComponents\Design\GradientColorConverter.cs" />
+    <Compile Include="NetComponents\ITabRender.cs" />
+    <Compile Include="NetComponents\NetTabButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NetComponents\Design\NetTabPageDesigner.cs" />
+    <Compile Include="NetComponents\Enums.cs" />
+    <Compile Include="NetComponents\GradientColor.cs" />
+    <Compile Include="NetComponents\NetTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NetComponents\NetTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NetComponents\NetTabPageCollection.cs" />
+    <Compile Include="NetComponents\NetTabPageEventArgs.cs" />
+    <Compile Include="NetComponents\NetPageSelectedEventArgs.cs" />
+    <Compile Include="NetComponents\NetTabRender.cs" />
+    <Compile Include="OutlookBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OutlookBar.Designer.cs">
+      <DependentUpon>OutlookBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OutlookBarButton.cs" />
+    <Compile Include="OutlookBarButtons.cs" />
+    <Compile Include="PieGraph.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RadioBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RadioBox.Designer.cs">
+      <DependentUpon>RadioBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RadioBoxCollection.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Series.cs" />
+    <Compile Include="SeriesList.cs" />
+    <Compile Include="Strings.Designer.cs">
+      <DependentUpon>Strings.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Strings.en.Designer.cs">
+      <DependentUpon>Strings.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="TextBoxNumber.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TextBoxNumber.Designer.cs">
+      <DependentUpon>TextBoxNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TextEdit.cs" />
+    <Compile Include="TextMixed.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThirdParty\CornerBowl\CornerBowlPopup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThirdParty\CornerBowl\CornerBowlPopupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThirdParty\DropDownControl\DropDownContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThirdParty\DropDownControl\DropDownControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThirdParty\DropDownControl\DropDownControl.Designer.cs">
+      <DependentUpon>DropDownControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdParty\DropDownControl\Enums.cs" />
+    <Compile Include="ThirdParty\GlowBox\GlowBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThirdParty\GlowBox\GlowBox.Designer.cs">
+      <DependentUpon>GlowBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdParty\GlowBox\GlowGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThirdParty\GlowBox\GlowGroupBox.Designer.cs">
+      <DependentUpon>GlowGroupBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdParty\MRG\LoadingCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ThirdParty\OutlookStyle\DataSourceManager.cs" />
+    <Compile Include="ThirdParty\OutlookStyle\DataSourceRow.cs" />
+    <Compile Include="ThirdParty\OutlookStyle\DataSourceRowComparer.cs" />
+    <Compile Include="ThirdParty\OutlookStyle\IOutlookGridGroup.cs" />
+    <Compile Include="ThirdParty\OutlookStyle\OutlookgGridDefaultGroup.cs" />
+    <Compile Include="ThirdParty\OutlookStyle\OutlookGrid.cs" />
+    <Compile Include="ThirdParty\OutlookStyle\OutlookGrid.Designer.cs">
+      <DependentUpon>OutlookGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThirdParty\OutlookStyle\OutlookGridAlphabeticGroup.cs" />
+    <Compile Include="ThirdParty\OutlookStyle\OutlookGridRow.cs" />
+    <Compile Include="ThirdParty\OutlookStyle\OutlookGridRowComparer.cs" />
+    <Compile Include="ThirdParty\TreeGridView\TreeGridCell.cs" />
+    <Compile Include="ThirdParty\TreeGridView\TreeGridEvents.cs" />
+    <Compile Include="ThirdParty\TreeGridView\TreeGridNode.cs" />
+    <Compile Include="ThirdParty\TreeGridView\TreeGridNodeCollection.cs" />
+    <Compile Include="ThirdParty\TreeGridView\TreeGridView.cs" />
+    <Compile Include="TreeNodeColumn.cs" />
+    <Compile Include="TreeViewColumns.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UnicodeCategory.cs" />
+    <Compile Include="UnicodeCollection.cs" />
+    <Compile Include="UnicodeType.cs" />
+    <Compile Include="UnicodeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Design\FormStringCollection.en.resx">
+      <DependentUpon>FormStringCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Design\FormStringCollection.resx">
+      <DependentUpon>FormStringCollection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImageBox.resx">
+      <DependentUpon>ImageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LabelLinkImage.resx">
+      <DependentUpon>LabelLinkImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RadioBox.resx">
+      <DependentUpon>RadioBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextBoxNumber.resx">
+      <DependentUpon>TextBoxNumber.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ImageBox.bmp" />
+    <None Include="Properties\Changes.txt" />
+    <EmbeddedResource Include="RadioBox.bmp" />
+    <EmbeddedResource Include="TextBoxNumber.bmp" />
+    <EmbeddedResource Include="ThirdParty\GlowBox\GlowBox.bmp" />
+    <EmbeddedResource Include="ThirdParty\GlowBox\GlowGroupBox.bmp" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ComponentLib.Core\ComponentLib.Core.csproj">
+      <Project>{23E004DD-EEF4-4759-BF89-3AE0EC1DB6D8}</Project>
+      <Name>ComponentLib.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+</Project>

@@ -1,0 +1,90 @@
+﻿Версия 1.4.
+- Целевая платформа изменена на .NET Framework 4.6.1
+
+Версия 1.4.6156.* (08.11.2016)
+- Косметические изменения
+
+Версия 1.4.5956.* (22.08.2014)
+- Изменения
+  * В XmlExtension методы CreateElement помечены как obsolete, вместо них используются CreateItem
+
+- Добавлен
+  * Класс TypExtension
+
+Версия 1.3.19.0 (01.01.2015)
+
+- Косметические изменения
+  * IXmlData
+  * IAccess
+  * Command
+  * CommandCollection
+  * CommandImage
+  * CommandImageCollection
+  * ConvertExtension
+  * File
+  * FileNames
+  * ToolbarCommandCollection
+  * Xml\XmlAttributeElement
+  * Xml\XmlExtension
+  
+- Изменения
+  * History: удален метод InternalChange (состоял из одного присваивания и вызывался в одном месте).
+  * History: метод InternalAdd переименован в AddItem
+  * ObjectAccessCollection: параметр класса T должен иметь конструктор по умолчанию
+  * ToolbarCommand: добавлен DisplayStyle
+  
+- Добавлен
+  * HSLColor
+  * HSVColor
+  * RecentFiles
+  * RecentFileEditor
+
+Версия 1.2.0.0 (08.04.2013)
+
+- Добавлены несколко иконок команд
+- Добавлен метод Clear в класс History
+- В класс ToolbarCommand добавлены свойства ViewImage, ViewText
+- Добавлен дополнительный метод AttributeValueAsBool в класс XmlExtension
+
+- Исправлены мелкие ошибки
+
+Версия 1.1.5.0 (17.11.2012)
+
+- Исправлены мелкие ошибки
+
+Версия 1.1.4.0 (04.11.2012)
+
+- Исправлены мелкие ошибки
+
+Версия 1.1.3.0 (27.10.2012)
+
+- При создании CommandCollection отсутствующие в файле настроек команды, добавляются из
+  defaultCommands.
+
+Версия 1.1.2.0 (27.05.2012)
+
+- В класс XmlExtension добавлен метод CreateOrReplaceElement
+
+Версия 1.1.1.0 (11.05.2012)
+
+- В классе ConvertExtension, в методах ToList, ToString параметр 'char delimiter' заменен на string delimiter
+
+Версия 1.1.0.0 (16.03.2012)
+
+- Класс Commands заменен на CommandCollection и унаследован от ICollection<T>
+- Класс ToolbarCommands заменен на ToolbarCommandCollection и унаследован от ICollection<T>
+- Класс ImageData переименован на CommandImage
+- Класс Images заменен на CommandImageCollection и унаследован от ICollection<T>
+- Добавлены интерфейсы IAccess, IXmlData
+- Добавлен класс XmlExtension расширяющий XmlDocument
+- Класс File дополнительно уначледован от IAccess, IXmlData и добавлены реализации методов этих интерфейсов
+- Класс SortedFiles заменен на ObjectAccessCollection и унаследован от ICollection<T>
+- Класс Utils заменен на ConvertExtension
+- Удален класс CommandSeparator
+- Добавлен класс FileNames, содержащий константы имен файлов.
+
+Версия 1.0.1.0 (25.11.2011)
+
+ - В конструкторе Commands, если существует файл из которого загружается список команд, параметр
+   defaultCommands игнорировался. Теперь из этого списка добавляются команды, отсутствующие в
+   загружаемом списке

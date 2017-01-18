@@ -1,0 +1,19 @@
+﻿Версия 1.2.1.0 (17.11.2012)
+
+- В класс AbstractBaseCollection добавлен метод GetEnumerator
+
+Версия 1.2.0.0 (04.11.2012)
+
+- В интерфейс IExtCollection добавлены свойства Count, Colletion, IsEmpty
+- В класс AbstractBaseCollection добавлены реализации этих свойств
+- Добавлено свойство IsEmpty в интерфейс IDatabase и его реализация в класс BaseDatabase
+
+Версия 1.1.0.0 (27.10.2012)
+
+- В интерфейс IBaseCollection добавлен метод Create и его реализация в класс AbstractBaseCollection
+- Добавлен класс BaseDatabase
+- Добавлен класс DatabaseOpeninEventArgs
+
+Версия 1.0.0.0 (27.12.2010)
+
+- Стабильная версия

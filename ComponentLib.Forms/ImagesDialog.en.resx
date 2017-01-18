@@ -1,0 +1,509 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="&gt;&gt;kryptonRadioButton1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonRadioButton, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Panel.Name" xml:space="preserve">
+    <value>kryptonGroupBox1.Panel</value>
+  </data>
+  <data name="&gt;&gt;kryptonRadioButton2.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonRadioButton, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="buttonOK.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="buttonCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>221, 349</value>
+  </data>
+  <data name="kryptonGroupBox1.Values.Heading" xml:space="preserve">
+    <value>Icon Source</value>
+  </data>
+  <data name="comboCategory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 16</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Panel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="buttonBrowse.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="kryptonRadioButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 16</value>
+  </data>
+  <data name="buttonCancel.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAoNJREFUOE+lk+tL
+        U2Ecx+tNf0ghRIl0JaIwrdC5eQs1mIVJa4ihlmmh0DTxUro0dV5m5jRlRqmFEXSxC5kvemPh8q6p1Lyc
+        2WWMKNpmn54z59QwCDrwwHk45/O9nPP81gPr/uuSBVYuW0Odar7FZPlkbrLPNzdI8031ks1ktEu1lZYZ
+        fVHM9JX8DSvfXwXPGauU9s7bVve7bhh8CX3P4G0XvHmM+/VDPjca+ZCTfW5NgbkaQ9iXjtZJd38PdLfA
+        PT20FcOtAmjKgbsVuF49wGa4OjaVnqpcEvEkmKutVH5tN1vdfcL1RRPcKRJgITTnQcNFMGZB+Rm4WYjr
+        STtz+nzrZLLGI+IRsF2v7nf3PoWuG2AWkAyaBFgnQEMmlAm4OBkuJYp9Fq4OE1Mp2n6fgGSsdND7SETV
+        LTp6wAwBpi2C+VrIEXCWGs5GiYRGpk5rHD6B2Qq9jZ5OEfXCGuAJyI6HjDhIE3CSQlQpZ+JkvM0nMFNS
+        KPG8DUpTVzh6wUwBnomGZBVoQuD4AagvYfxYjOQTmC7QOehqhVwB5ax09IKnBJgQDOp9ELVdVLzMWFzE
+        coWPWekD7vvNcE30ljvKUWXHJTB+P8TtAZW/qBCJ01DAsCJowJdgQpugms3LnnZ1NEJeknALWlxqLxi9
+        k4WQzSxolXyvKWYiIXa6f5e/cPD+Rvlm9GhkhPV8yqTTXAOZ4qNF7xBxt/ErzB/nQT9+Jir4VlXEe/WR
+        8b4Av4hVB2lpM6QIDremaKzOWnECqwtwl+fiLNPxo1SHQ6+TYfq2bBQ9l+dn1SzIDwaD94aPqA5bRqNC
+        7SOqQ9KQIkgaDg20DwTutlgC/GItWzf9fZj+nMx/2f8G++2we3vfkZMAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="kryptonLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 16</value>
+  </data>
+  <data name="&gt;&gt;buttonBrowse.Parent" xml:space="preserve">
+    <value>kryptonGroupBox1.Panel</value>
+  </data>
+  <data name="kryptonRadioButton2.Values.Text" xml:space="preserve">
+    <value>Other icons:</value>
+  </data>
+  <data name="buttonBrowse.Values.Text" xml:space="preserve">
+    <value>Browse...</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Panel.Parent" xml:space="preserve">
+    <value>kryptonGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;listImages.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;textFilter.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="kryptonGroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="comboCategory.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonBrowse.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="listImages.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="buttonOK.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="kryptonLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 118</value>
+  </data>
+  <data name="kryptonGroupBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="comboCategory.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="buttonCancel.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="kryptonRadioButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 42</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="&gt;&gt;comboCategory.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;textFilter.Name" xml:space="preserve">
+    <value>textFilter</value>
+  </data>
+  <data name="listImages.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 144</value>
+  </data>
+  <data name="buttonCancel.Values.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="buttonBrowse.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="kryptonGroupBox1.Values.Description" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="buttonBrowse.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="kryptonLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;comboCategory.Parent" xml:space="preserve">
+    <value>kryptonGroupBox1.Panel</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;listImages.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.Name" xml:space="preserve">
+    <value>buttonCancel</value>
+  </data>
+  <data name="textFilter.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="buttonCancel.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="&gt;&gt;kryptonRadioButton1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="buttonOK.Location" type="System.Drawing.Point, System.Drawing">
+    <value>125, 349</value>
+  </data>
+  <data name="&gt;&gt;buttonSpecAny1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.ButtonSpecAny, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="buttonCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 25</value>
+  </data>
+  <data name="imageList.ImageSize" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="kryptonRadioButton2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>83, 16</value>
+  </data>
+  <data name="buttonOK.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="kryptonRadioButton1.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="kryptonRadioButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="kryptonRadioButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;kryptonRadioButton2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;kryptonRadioButton1.Parent" xml:space="preserve">
+    <value>kryptonGroupBox1.Panel</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormSelectImage</value>
+  </data>
+  <data name="kryptonGroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <assembly alias="ComponentFactory.Krypton.Toolkit" name="ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e" />
+  <data name="buttonSpecAny1.Type" type="ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle, ComponentFactory.Krypton.Toolkit">
+    <value>Close</value>
+  </data>
+  <data name="kryptonLabel1.Values.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="kryptonGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 100</value>
+  </data>
+  <data name="buttonOK.Values.Text" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="buttonBrowse.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="kryptonGroupBox1.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="buttonCancel.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;buttonOK.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;listImages.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="textFilter.Location" type="System.Drawing.Point, System.Drawing">
+    <value>64, 118</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonGroupBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;buttonBrowse.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="kryptonRadioButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="buttonBrowse.Location" type="System.Drawing.Point, System.Drawing">
+    <value>120, 42</value>
+  </data>
+  <data name="&gt;&gt;imageList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ImageList, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;kryptonRadioButton1.Name" xml:space="preserve">
+    <value>kryptonRadioButton1</value>
+  </data>
+  <data name="&gt;&gt;listImages.Name" xml:space="preserve">
+    <value>listImages</value>
+  </data>
+  <data name="textFilter.Size" type="System.Drawing.Size, System.Drawing">
+    <value>247, 20</value>
+  </data>
+  <data name="&gt;&gt;comboCategory.Name" xml:space="preserve">
+    <value>comboCategory</value>
+  </data>
+  <data name="listImages.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 199</value>
+  </data>
+  <data name="&gt;&gt;imageList.Name" xml:space="preserve">
+    <value>imageList</value>
+  </data>
+  <data name="&gt;&gt;buttonBrowse.Name" xml:space="preserve">
+    <value>buttonBrowse</value>
+  </data>
+  <data name="kryptonRadioButton2.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="&gt;&gt;kryptonRadioButton2.Parent" xml:space="preserve">
+    <value>kryptonGroupBox1.Panel</value>
+  </data>
+  <data name="kryptonRadioButton2.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="comboCategory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 20</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Panel.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonGroupPanel, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="kryptonRadioButton1.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.Name" xml:space="preserve">
+    <value>kryptonLabel1</value>
+  </data>
+  <data name="kryptonRadioButton1.Values.Text" xml:space="preserve">
+    <value>System icons:</value>
+  </data>
+  <data name="buttonBrowse.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="buttonOK.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 25</value>
+  </data>
+  <data name="&gt;&gt;buttonSpecAny1.Name" xml:space="preserve">
+    <value>buttonSpecAny1</value>
+  </data>
+  <data name="textFilter.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Left, Right</value>
+  </data>
+  <data name="buttonBrowse.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 25</value>
+  </data>
+  <data name="kryptonLabel1.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Icons</value>
+  </data>
+  <data name="&gt;&gt;comboCategory.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="buttonOK.Values.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAbZJREFUOE+lkmsv
+        QnEcx3kk5724lwhz21iuSxE5nMg1midUp9I9hrkcD839OltorsNsHirJeA3mTUhf/86mjTKas52H38vv
+        8/+mAkj51xc1+M+ftFi52cA1rdTYPkOTMmjZqOd0JxoMHjGQcuUsf/5f6zev13HDx92Yf3LCc2eCeleJ
+        UneB+U8GirVaTutTY/bRgZlHG7r2WlHmKYTEKhTEDLTXTGX/Bd37vZF8tZaLVp4O2TAVsvLJJU5xuHA8
+        TxA7QXvFFPed06/srQ6Mt3nk04TA4gYOOzH1MI7JBwuYnRYUO/LDBZZcXswbDF52VvWdtb9M+FnMhuxQ
+        7crCBNaIbFk6039AYyJogeeeRce2AkV2UVhszomJeYPeU1W6xtcG/c0QFp7d8PhN0B6roTvVwOU3wnlv
+        BL0lh8QmfM83fRXHTqD35RRJhu5Mw985GTTDEdDD4ddDtdkUhRURsdlfkuN2QGBRsiUperztcAYMsN6N
+        om1dBgIrIjJmJRTH7UC6WEFVz5WRygoo1xpBYEWEhswfxQmHRN6XKnGJQWC95ekz034bWsIhEVhU7ljG
+        r+KkpvxTkw+TOHxqGWjxLQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="&gt;&gt;kryptonRadioButton2.Name" xml:space="preserve">
+    <value>kryptonRadioButton2</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.Name" xml:space="preserve">
+    <value>buttonOK</value>
+  </data>
+  <data name="kryptonLabel1.Values.ImageTransparentColor" type="System.Drawing.Color, System.Drawing">
+    <value />
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Name" xml:space="preserve">
+    <value>kryptonGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;buttonCancel.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>323, 386</value>
+  </data>
+  <data name="&gt;&gt;textFilter.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonForm, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;buttonOK.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;textFilter.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.4.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="listImages.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="buttonOK.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="kryptonRadioButton2.Values.ExtraText" xml:space="preserve">
+    <value />
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="imageList.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+</root>

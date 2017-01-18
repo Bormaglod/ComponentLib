@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BasicLatin" xml:space="preserve">
+    <value>Basic Latin</value>
+  </data>
+  <data name="Latin1Supplement" xml:space="preserve">
+    <value>Latin-1 Supplement</value>
+  </data>
+  <data name="LatinExtendedA" xml:space="preserve">
+    <value>Latin Extended-A</value>
+  </data>
+  <data name="LatinExtendedB" xml:space="preserve">
+    <value>Latin Extended-B</value>
+  </data>
+  <data name="LatinExtendedAdditional" xml:space="preserve">
+    <value>Latin Extended Additional</value>
+  </data>
+  <data name="LatinExtendedC" xml:space="preserve">
+    <value>Latin Extended-C</value>
+  </data>
+  <data name="LatinExtendedD" xml:space="preserve">
+    <value>Latin Extended-D</value>
+  </data>
+  <data name="SmallFormVariants" xml:space="preserve">
+    <value>Small Form Variants</value>
+  </data>
+  <data name="Armenian" xml:space="preserve">
+    <value>Armenian</value>
+  </data>
+  <data name="Coptic" xml:space="preserve">
+    <value>Coptic</value>
+  </data>
+  <data name="Cyrillic" xml:space="preserve">
+    <value>Cyrillic</value>
+  </data>
+  <data name="CyrillicSupplement" xml:space="preserve">
+    <value>Cyrillic Supplement</value>
+  </data>
+  <data name="CyrillicExtendedA" xml:space="preserve">
+    <value>Cyrillic Extended-A</value>
+  </data>
+  <data name="CyrillicExtendedB" xml:space="preserve">
+    <value>Cyrillic Extended-B</value>
+  </data>
+  <data name="Georgian" xml:space="preserve">
+    <value>Georgian</value>
+  </data>
+  <data name="GeorgianSupplement" xml:space="preserve">
+    <value>Georgian Supplement</value>
+  </data>
+  <data name="GreekAndCoptic" xml:space="preserve">
+    <value>Greek and Coptic</value>
+  </data>
+  <data name="GreekExtended" xml:space="preserve">
+    <value>Greek Extended</value>
+  </data>
+  <data name="Ethiopic" xml:space="preserve">
+    <value>Ethiopic</value>
+  </data>
+  <data name="EthiopicSupplement" xml:space="preserve">
+    <value>Ethiopic Supplement</value>
+  </data>
+  <data name="EthiopicExtended" xml:space="preserve">
+    <value>Ethiopic Extended</value>
+  </data>
+  <data name="NKo" xml:space="preserve">
+    <value>NKo</value>
+  </data>
+  <data name="Tifinagh" xml:space="preserve">
+    <value>Tifinagh</value>
+  </data>
+  <data name="Vai" xml:space="preserve">
+    <value>Vai</value>
+  </data>
+  <data name="Bamum" xml:space="preserve">
+    <value>Bamum</value>
+  </data>
+  <data name="Arabic" xml:space="preserve">
+    <value>Arabic</value>
+  </data>
+  <data name="ArabicSupplement" xml:space="preserve">
+    <value>Arabic Supplement</value>
+  </data>
+  <data name="ArabicPresentationFormsA" xml:space="preserve">
+    <value>Arabic Presentation Forms-A</value>
+  </data>
+  <data name="ArabicPresentationFormsB" xml:space="preserve">
+    <value>Arabic Presentation Forms-B</value>
+  </data>
+  <data name="Hebrew" xml:space="preserve">
+    <value>Hebrew</value>
+  </data>
+  <data name="Syriac" xml:space="preserve">
+    <value>Syriac</value>
+  </data>
+  <data name="Thaana" xml:space="preserve">
+    <value>Thaana</value>
+  </data>
+  <data name="Samaritan" xml:space="preserve">
+    <value>Samaritan</value>
+  </data>
+  <data name="Bengali" xml:space="preserve">
+    <value>Bengali</value>
+  </data>
+  <data name="Devanagari" xml:space="preserve">
+    <value>Devanagari</value>
+  </data>
+  <data name="Gujarati" xml:space="preserve">
+    <value>Gujarati</value>
+  </data>
+  <data name="Gurmukhi" xml:space="preserve">
+    <value>Gurmukhi</value>
+  </data>
+  <data name="Kannada" xml:space="preserve">
+    <value>Kannada</value>
+  </data>
+  <data name="Limbu" xml:space="preserve">
+    <value>Limbu</value>
+  </data>
+  <data name="Malayalam" xml:space="preserve">
+    <value>Malayalam</value>
+  </data>
+  <data name="Oriya" xml:space="preserve">
+    <value>Oriya</value>
+  </data>
+  <data name="Sinhala" xml:space="preserve">
+    <value>Sinhala</value>
+  </data>
+  <data name="SylotiNagri" xml:space="preserve">
+    <value>Syloti Nagri</value>
+  </data>
+  <data name="Tamil" xml:space="preserve">
+    <value>Tamil</value>
+  </data>
+  <data name="Telugu" xml:space="preserve">
+    <value>Telugu</value>
+  </data>
+  <data name="Lepcha" xml:space="preserve">
+    <value>Lepcha</value>
+  </data>
+  <data name="OlChiki" xml:space="preserve">
+    <value>Ol Chiki</value>
+  </data>
+  <data name="VedicExtensions" xml:space="preserve">
+    <value>Vedic Extensions</value>
+  </data>
+  <data name="CommonIndicNumberForms" xml:space="preserve">
+    <value>Common Indic Number Forms</value>
+  </data>
+  <data name="Saurashtra" xml:space="preserve">
+    <value>Saurashtra</value>
+  </data>
+  <data name="DevanagariExtended" xml:space="preserve">
+    <value>Devanagari Extended</value>
+  </data>
+  <data name="MeeteiMayek" xml:space="preserve">
+    <value>Meetei Mayek</value>
+  </data>
+  <data name="Buhid" xml:space="preserve">
+    <value>Buhid</value>
+  </data>
+  <data name="Tagalog" xml:space="preserve">
+    <value>Tagalog</value>
+  </data>
+  <data name="Hanunoo" xml:space="preserve">
+    <value>Hanunoo</value>
+  </data>
+  <data name="Tagbanwa" xml:space="preserve">
+    <value>Tagbanwa</value>
+  </data>
+  <data name="Buginese" xml:space="preserve">
+    <value>Buginese</value>
+  </data>
+  <data name="Balinese" xml:space="preserve">
+    <value>Balinese</value>
+  </data>
+  <data name="Khmer" xml:space="preserve">
+    <value>Khmer</value>
+  </data>
+  <data name="KhmerSymbols" xml:space="preserve">
+    <value>Khmer Symbols</value>
+  </data>
+  <data name="Lao" xml:space="preserve">
+    <value>Lao</value>
+  </data>
+  <data name="Myanmar" xml:space="preserve">
+    <value>Myanmar</value>
+  </data>
+  <data name="MyanmarExtendedA" xml:space="preserve">
+    <value>Myanmar Extended-A</value>
+  </data>
+  <data name="TaiLe" xml:space="preserve">
+    <value>Tai Le</value>
+  </data>
+  <data name="NewTaiLue" xml:space="preserve">
+    <value>New Tai Lue</value>
+  </data>
+  <data name="Thai" xml:space="preserve">
+    <value>Thai</value>
+  </data>
+  <data name="TaiTham" xml:space="preserve">
+    <value>Tai Tham</value>
+  </data>
+  <data name="Sundanese" xml:space="preserve">
+    <value>Sundanese</value>
+  </data>
+  <data name="KayahLi" xml:space="preserve">
+    <value>Kayah Li</value>
+  </data>
+  <data name="Rejang" xml:space="preserve">
+    <value>Rejang</value>
+  </data>
+  <data name="Javanese" xml:space="preserve">
+    <value>Javanese</value>
+  </data>
+  <data name="Cham" xml:space="preserve">
+    <value>Cham</value>
+  </data>
+  <data name="TaiViet" xml:space="preserve">
+    <value>Tai Viet</value>
+  </data>
+  <data name="CJKUnifiedIdeographs" xml:space="preserve">
+    <value>CJK Unified Ideographs</value>
+  </data>
+  <data name="CJKUnifiedIdeographsExtensionA" xml:space="preserve">
+    <value>CJK Unified Ideographs Extension A</value>
+  </data>
+  <data name="CJKCompatibilityIdeographs" xml:space="preserve">
+    <value>CJK Compatibility Ideographs</value>
+  </data>
+  <data name="CJKSymbolsAndPunctuation" xml:space="preserve">
+    <value>CJK Symbols and Punctuation</value>
+  </data>
+  <data name="EnclosedCJKLettersAndMonths" xml:space="preserve">
+    <value>Enclosed CJK Letters and Months</value>
+  </data>
+  <data name="CJKCompatibility" xml:space="preserve">
+    <value>CJK Compatibility</value>
+  </data>
+  <data name="CJKCompatibilityForms" xml:space="preserve">
+    <value>CJK Compatibility Forms</value>
+  </data>
+  <data name="Kanbun" xml:space="preserve">
+    <value>Kanbun</value>
+  </data>
+  <data name="CJKRadicalsSupplement" xml:space="preserve">
+    <value>CJK Radicals Supplement</value>
+  </data>
+  <data name="KangxiRadicals" xml:space="preserve">
+    <value>Kangxi Radicals</value>
+  </data>
+  <data name="CJKStrokes" xml:space="preserve">
+    <value>CJK Strokes</value>
+  </data>
+  <data name="IdeographicDescriptionCharacters" xml:space="preserve">
+    <value>Ideographic Description Characters</value>
+  </data>
+  <data name="Bopomofo" xml:space="preserve">
+    <value>Bopomofo</value>
+  </data>
+  <data name="BopomofoExtended" xml:space="preserve">
+    <value>Bopomofo Extended</value>
+  </data>
+  <data name="Hiragana" xml:space="preserve">
+    <value>Hiragana</value>
+  </data>
+  <data name="Katakana" xml:space="preserve">
+    <value>Katakana</value>
+  </data>
+  <data name="HangulSyllables" xml:space="preserve">
+    <value>Hangul Syllables</value>
+  </data>
+  <data name="HangulJamo" xml:space="preserve">
+    <value>Hangul Jamo</value>
+  </data>
+  <data name="HangulCompatibilityJamo" xml:space="preserve">
+    <value>Hangul Compatibility Jamo</value>
+  </data>
+  <data name="HangulJamoExtendedA" xml:space="preserve">
+    <value>Hangul Jamo Extended-A</value>
+  </data>
+  <data name="HangulJamoExtendedB" xml:space="preserve">
+    <value>Hangul Jamo Extended-B</value>
+  </data>
+  <data name="YiSyllables" xml:space="preserve">
+    <value>Yi Syllables</value>
+  </data>
+  <data name="YiRadicals" xml:space="preserve">
+    <value>Yi Radicals</value>
+  </data>
+  <data name="Lisu" xml:space="preserve">
+    <value>Lisu</value>
+  </data>
+  <data name="Mongolian" xml:space="preserve">
+    <value>Mongolian</value>
+  </data>
+  <data name="Phags-pa" xml:space="preserve">
+    <value>Phags-pa</value>
+  </data>
+  <data name="Tibetan" xml:space="preserve">
+    <value>Tibetan</value>
+  </data>
+  <data name="Glagolitic" xml:space="preserve">
+    <value>Glagolitic</value>
+  </data>
+  <data name="Ogham" xml:space="preserve">
+    <value>Ogham</value>
+  </data>
+  <data name="Runic" xml:space="preserve">
+    <value>Runic</value>
+  </data>
+  <data name="Cherokee" xml:space="preserve">
+    <value>Cherokee</value>
+  </data>
+  <data name="UnifiedCanadianAboriginalSyllabics" xml:space="preserve">
+    <value>Unified Canadian Aboriginal Syllabics</value>
+  </data>
+  <data name="UnifiedCanadianAboriginalSyllabicsExtended" xml:space="preserve">
+    <value>Unified Canadian Aboriginal Syllabics Extended</value>
+  </data>
+  <data name="GeneralPunctuation" xml:space="preserve">
+    <value>General Punctuation</value>
+  </data>
+  <data name="YijingHexagramSymbols" xml:space="preserve">
+    <value>Yijing Hexagram Symbols</value>
+  </data>
+  <data name="SupplementalPunctuation" xml:space="preserve">
+    <value>Supplemental Punctuation</value>
+  </data>
+  <data name="CurrencySymbols" xml:space="preserve">
+    <value>Currency Symbols</value>
+  </data>
+  <data name="EnclosedAlphanumerics" xml:space="preserve">
+    <value>Enclosed Alphanumerics</value>
+  </data>
+  <data name="MiscellaneousSymbols" xml:space="preserve">
+    <value>Miscellaneous Symbols</value>
+  </data>
+  <data name="Dingbats" xml:space="preserve">
+    <value>Dingbats</value>
+  </data>
+  <data name="BraillePatterns" xml:space="preserve">
+    <value>Braille Patterns</value>
+  </data>
+  <data name="NumberForms" xml:space="preserve">
+    <value>Number Forms</value>
+  </data>
+  <data name="SuperscriptsAndSubscripts" xml:space="preserve">
+    <value>Superscripts and Subscripts</value>
+  </data>
+  <data name="LetterlikeSymbols" xml:space="preserve">
+    <value>Letterlike Symbols</value>
+  </data>
+  <data name="Arrows" xml:space="preserve">
+    <value>Arrows</value>
+  </data>
+  <data name="MathematicalOperators" xml:space="preserve">
+    <value>Mathematical Operators</value>
+  </data>
+  <data name="SupplementalMathematicalOperators" xml:space="preserve">
+    <value>Supplemental Mathematical Operators</value>
+  </data>
+  <data name="MiscellaneousMathematicalSymbolsA" xml:space="preserve">
+    <value>Miscellaneous Mathematical Symbols-A</value>
+  </data>
+  <data name="MiscellaneousMathematicalSymbolsB" xml:space="preserve">
+    <value>Miscellaneous Mathematical Symbols-B</value>
+  </data>
+  <data name="SupplementalArrowsA" xml:space="preserve">
+    <value>Supplemental Arrows-A</value>
+  </data>
+  <data name="SupplementalArrowsB" xml:space="preserve">
+    <value>Supplemental Arrows-B</value>
+  </data>
+  <data name="MiscellaneousSymbolsAndArrows" xml:space="preserve">
+    <value>Miscellaneous Symbols and Arrows</value>
+  </data>
+  <data name="GeometricShapes" xml:space="preserve">
+    <value>Geometric Shapes</value>
+  </data>
+  <data name="BoxDrawing" xml:space="preserve">
+    <value>Box Drawing</value>
+  </data>
+  <data name="BlockElements" xml:space="preserve">
+    <value>Block Elements</value>
+  </data>
+  <data name="ControlPictures" xml:space="preserve">
+    <value>Control Pictures</value>
+  </data>
+  <data name="MiscellaneousTechnical" xml:space="preserve">
+    <value>Miscellaneous Technical</value>
+  </data>
+  <data name="OpticalCharacterRecognition" xml:space="preserve">
+    <value>Optical Character Recognition</value>
+  </data>
+  <data name="IPAExtensions" xml:space="preserve">
+    <value>IPA Extensions</value>
+  </data>
+  <data name="KatakanaPhoneticExtensions" xml:space="preserve">
+    <value>Katakana Phonetic Extensions</value>
+  </data>
+  <data name="PhoneticExtensions" xml:space="preserve">
+    <value>Phonetic Extensions</value>
+  </data>
+  <data name="PhoneticExtensionsSupplement" xml:space="preserve">
+    <value>Phonetic Extensions Supplement</value>
+  </data>
+  <data name="SpacingModifierLetters" xml:space="preserve">
+    <value>Spacing Modifier Letters</value>
+  </data>
+  <data name="ModifierToneLetters" xml:space="preserve">
+    <value>Modifier Tone Letters</value>
+  </data>
+  <data name="CombiningDiacriticalMarks" xml:space="preserve">
+    <value>Combining Diacritical Marks</value>
+  </data>
+  <data name="CombiningDiacriticalMarksSupplement" xml:space="preserve">
+    <value>Combining Diacritical Marks Supplement</value>
+  </data>
+  <data name="CombiningHalfMarks" xml:space="preserve">
+    <value>Combining Half Marks</value>
+  </data>
+  <data name="CombiningDiacriticalMarksForSymbols" xml:space="preserve">
+    <value>Combining Diacritical Marks for Symbols</value>
+  </data>
+  <data name="AlphabeticPresentationForms" xml:space="preserve">
+    <value>Alphabetic Presentation Forms</value>
+  </data>
+  <data name="PrivateUseArea" xml:space="preserve">
+    <value>Private Use Area</value>
+  </data>
+  <data name="VariationSelectors" xml:space="preserve">
+    <value>Variation Selectors</value>
+  </data>
+  <data name="VerticalForms" xml:space="preserve">
+    <value>Vertical Forms</value>
+  </data>
+  <data name="Specials" xml:space="preserve">
+    <value>Specials</value>
+  </data>
+  <data name="HalfwidthAndFullwidthForms" xml:space="preserve">
+    <value>Halfwidth and Fullwidth Forms</value>
+  </data>
+  <data name="European" xml:space="preserve">
+    <value>European</value>
+  </data>
+  <data name="African" xml:space="preserve">
+    <value>African</value>
+  </data>
+  <data name="MiddleEast" xml:space="preserve">
+    <value>Middle East</value>
+  </data>
+  <data name="SouthAsian" xml:space="preserve">
+    <value>South Asian</value>
+  </data>
+  <data name="Philippines" xml:space="preserve">
+    <value>Philippines</value>
+  </data>
+  <data name="SouthEastAsian" xml:space="preserve">
+    <value>South-East Asian</value>
+  </data>
+  <data name="EastAsian" xml:space="preserve">
+    <value>East Asian</value>
+  </data>
+  <data name="CentralAsian" xml:space="preserve">
+    <value>Central Asian</value>
+  </data>
+  <data name="OtherLanguages" xml:space="preserve">
+    <value>Other Languages</value>
+  </data>
+  <data name="Symbols" xml:space="preserve">
+    <value>Symbols</value>
+  </data>
+  <data name="Mathematics" xml:space="preserve">
+    <value>Mathematics</value>
+  </data>
+  <data name="Phonetic" xml:space="preserve">
+    <value>Phonetic</value>
+  </data>
+  <data name="Diacritic" xml:space="preserve">
+    <value>Diacritic</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="LinearBSyllabary" xml:space="preserve">
+    <value>Linear B Syllabary</value>
+  </data>
+  <data name="LinearBIdeograms" xml:space="preserve">
+    <value>Linear B Ideograms</value>
+  </data>
+  <data name="AegeanNumbers" xml:space="preserve">
+    <value>Aegean Numbers</value>
+  </data>
+  <data name="AncientGreekNumbers" xml:space="preserve">
+    <value>Ancient Greek Numbers</value>
+  </data>
+  <data name="OldItalic" xml:space="preserve">
+    <value>Old Italic</value>
+  </data>
+  <data name="Gothic" xml:space="preserve">
+    <value>Gothic</value>
+  </data>
+  <data name="Ugaritic" xml:space="preserve">
+    <value>Ugaritic</value>
+  </data>
+  <data name="OldPersian" xml:space="preserve">
+    <value>Old Persian</value>
+  </data>
+  <data name="Osmanya" xml:space="preserve">
+    <value>Osmanya</value>
+  </data>
+  <data name="CypriotSyllabary" xml:space="preserve">
+    <value>Cypriot Syllabary</value>
+  </data>
+  <data name="Phoenician" xml:space="preserve">
+    <value>Phoenician</value>
+  </data>
+  <data name="ByzantineMusicalSymbols" xml:space="preserve">
+    <value>Byzantine Musical Symbols</value>
+  </data>
+  <data name="MusicalSymbols" xml:space="preserve">
+    <value>Musical Symbols</value>
+  </data>
+  <data name="AncientGreekMusicalNotation" xml:space="preserve">
+    <value>Ancient Greek Musical Notation</value>
+  </data>
+  <data name="TaiXuanJingSymbols" xml:space="preserve">
+    <value>Tai Xuan Jing Symbols</value>
+  </data>
+  <data name="CountingRodNumerals" xml:space="preserve">
+    <value>Counting Rod Numerals</value>
+  </data>
+  <data name="MathematicalAlphanumericSymbols" xml:space="preserve">
+    <value>Mathematical Alphanumeric Symbols</value>
+  </data>
+  <data name="InputValue" xml:space="preserve">
+    <value>Введите значение</value>
+  </data>
+  <data name="List" xml:space="preserve">
+    <value>(List...)</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="AddInternet" xml:space="preserve">
+    <value>Add from internet</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+</root>
