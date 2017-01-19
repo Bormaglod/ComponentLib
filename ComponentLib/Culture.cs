@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="Culture.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -73,17 +73,12 @@ namespace ComponentLib.Globalization
             return leftOperand.CompareTo(rightOperand) > 0;
         }
         
-        public Culture Clone()
-        {
-            return new Culture(Name, Locale, Id);
-        }
+        public Culture Clone() => new Culture(Name, Locale, Id);
         
-        public int CompareTo(Culture other)
-        {
-            return string.Compare(Name, other.Name, StringComparison.CurrentCultureIgnoreCase);
-        }
+        public int CompareTo(Culture other) => string.Compare(Name, other.Name, StringComparison.CurrentCultureIgnoreCase);
         
         #region Equals and GetHashCode implementation
+
         public override bool Equals(object obj)
         {
             Culture other = obj as Culture;
@@ -118,9 +113,6 @@ namespace ComponentLib.Globalization
         
         #endregion
 
-        public override string ToString()
-        {
-            return Name;
-        }
+        public override string ToString() => Name;
     }
 }

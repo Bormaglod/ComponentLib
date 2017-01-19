@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="MemLanguageNode.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -79,7 +79,7 @@ namespace ComponentLib.Globalization
                             return this[textName, DefaultLCID];
                         }
                         
-                        return ParentNode != null ? ParentNode[textName, lcid] : string.Format("[{0}]", textName);
+                        return ParentNode != null ? ParentNode[textName, lcid] : $"[{textName}]";
                     }
 
                     if (ParentNode != null && textName.StartsWith("../"))
@@ -92,7 +92,7 @@ namespace ComponentLib.Globalization
                         return ParentNode[textName, lcid];
                     }
 
-                    return _languages[lcid][textName] ?? string.Format("[{0}]", textName);
+                    return _languages[lcid][textName] ?? $"[{textName}]";
                 }
             }
         }
@@ -101,10 +101,7 @@ namespace ComponentLib.Globalization
         /// Returns the number of languages in the node
         /// </summary>
         /// <remarks>Returns the number of languages and Not text entries</remarks>
-        public override int Count
-        {
-            get { return _languages.Count; }
-        }
+        public override int Count => _languages.Count;
 
         /// <summary>
         /// Adds a text entry to the language node
@@ -123,7 +120,7 @@ namespace ComponentLib.Globalization
 
 				if (_languages[lcid][name] != null)
 				{
-				    throw new InvalidOperationException("Value '" + name + "' already added.");
+				    throw new InvalidOperationException($"Value '{name}' already added.");
 				}
 
                 _languages[lcid].Add(name, text);

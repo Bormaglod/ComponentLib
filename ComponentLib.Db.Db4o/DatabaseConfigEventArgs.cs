@@ -1,9 +1,9 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="DatabaseConfigEventArgs.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2014 Sergey Teplyashin. All rights reserved.
+// <copyright file="DatabaseConfigEventArgs.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей ВасильевичТепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
-// <email>sergey-teplyashin@yandex.ru</email>
+// <email>sergio.teplyashin@gmail.com</email>
 // <license>
 //     This program is free software; you can redistribute it and/or modify
 //     it under the terms of the GNU General Public License as published by
@@ -36,10 +36,7 @@ namespace ComponentLib.Db.Db4o
         {
             cfg = config;
         }
-        
-        public IEmbeddedConfiguration Config
-        {
-            get { return cfg; }
-        }
+
+        public IEmbeddedConfiguration Config => cfg;
     }
 }

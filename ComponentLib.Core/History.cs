@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="History.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -40,66 +40,42 @@ namespace ComponentLib.Core
         /// <summary>
         /// Текущая позиция используемая в переходах по объектам.
         /// </summary>
-        int current;
+        int current = -1;
         
         /// <summary>
         /// Список объектов.
         /// </summary>
-        readonly List<T> objects;
-        
-        /// <summary>
-        /// Initializes a new instance of the History class.
-        /// </summary>
-        public History()
-        {
-            this.objects = new List<T>();
-            this.current = -1;
-        }
-        
+        readonly List<T> objects = new List<T>();
+
         /// <summary>
         /// Gets the count objects in list history.
         /// </summary>
         /// <value>Количество объектов в списке.</value>
-        public int Count
-        {
-            get { return objects.Count; }
-        }
+        public int Count => objects.Count;
         
         /// <summary>
         /// Gets the last added object.
         /// </summary>
         /// <value>Последний объект из списка.</value>
-        public T Last
-        {
-            get { return objects[objects.Count - 1]; }
-        }
+        public T Last => objects[objects.Count - 1];
         
         /// <summary>
         /// Gets the current object.
         /// </summary>
         /// <value>Текущий объект списка.</value>
-        public T Current
-        {
-            get { return objects[current]; }
-        }
+        public T Current => objects[current];
         
         /// <summary>
         /// Gets the IsFirst flag.
         /// </summary>
         /// <value>true, если текущий объект, является первым в списке.</value>
-        public bool IsFirst
-        {
-            get { return current < 1; }
-        }
+        public bool IsFirst => current < 1;
         
         /// <summary>
         /// Gets the IsLast flag.
         /// </summary>
         /// <value>true, если текущий объект, является последним в списке или список пуст.</value>
-        public bool IsLast
-        {
-            get { return current == -1 || current == objects.Count - 1; }
-        }
+        public bool IsLast => current == -1 || current == objects.Count - 1;
         
         /// <summary>
         /// <para>Метод добавляет объект в список. Объект вставляется после объекта Current.
@@ -135,19 +111,13 @@ namespace ComponentLib.Core
         /// Метод возвращает объект предшествующий Current и устанавливает Current на возвращаемый объект.
         /// </summary>
         /// <returns>Объект предшествующий Current.</returns>
-        public T Back()
-        {
-            return objects[--current];
-        }
+        public T Back() => objects[--current];
         
         /// <summary>
         /// Метод возвращает объект следующий за Current и устанавливает Current на возвращаемый объект.
         /// </summary>
         /// <returns>Объект следующий за Current.</returns>
-        public T Forward()
-        {
-            return objects[++current];
-        }
+        public T Forward() => objects[++current];
         
         public void Clear()
         {

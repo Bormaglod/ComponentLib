@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="File.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -75,19 +75,13 @@ namespace ComponentLib.Core
         /// <para>Gets the file name.</para>
         /// <para>Наименование файла.</para>
         /// </summary>
-        public string FileName
-        {
-            get { return fileName; }
-        }
+        public string FileName => fileName;
         
         /// <summary>
         /// <para>Gets the file name without path and extension.</para>
         /// <para>Наименование файла без пути и расширения.</para>
         /// </summary>
-        public string ShortFileName
-        {
-            get { return Path.GetFileNameWithoutExtension(fileName); }
-        }
+        public string ShortFileName => Path.GetFileNameWithoutExtension(fileName);
         
         /// <summary>
         /// <para>Gets or sets the file title.</para>
@@ -168,10 +162,7 @@ namespace ComponentLib.Core
         /// Returns a String that represents the current Object.
         /// </summary>
         /// <returns>A String that represents the current Object.</returns>
-        public override string ToString()
-        {
-            return ShortFileName;
-        }
+        public override string ToString() => ShortFileName;
         
         #region IComparable interface implemented
         

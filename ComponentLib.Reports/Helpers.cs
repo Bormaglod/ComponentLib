@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="Helpers.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2016 Sergey Teplyashin. All rights reserved.
+//     Copyright (c) 2010-2017 Sergey Teplyashin. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -93,15 +93,17 @@ namespace ComponentLib.Reports
                 {
                     run.DataContext = dataContext;
                 }
-                
+
                 run.SetBinding(BindableRun.BoundTextProperty, bindingBase);
                 return new Paragraph(run);
             }
             else
             {
-                Run run = new Run();
-                run.Text = (data == null) ? String.Empty : data.ToString();
-                return new Paragraph(run);
+                return new Paragraph(
+                    new Run()
+                    {
+                        Text = data?.ToString() ?? String.Empty
+                    });
             }
         }
         

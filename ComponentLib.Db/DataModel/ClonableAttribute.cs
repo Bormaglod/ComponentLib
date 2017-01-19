@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ClonableAttribute.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2015 Sergey Teplyashin. All rights reserved.
+// <copyright file="ClonableAttribute.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>

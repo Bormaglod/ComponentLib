@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="Check.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -26,7 +26,7 @@
 namespace ComponentLib
 {
     using System;
-    using ComponentLib.Globalization;
+    using Globalization;
     
     /// <summary>
     /// Design by contract validator
@@ -417,7 +417,7 @@ namespace ComponentLib
             : base(msg)
         {
             _orgString = orgMessage ?? string.Empty;
-            _arguments = new string[]{string.Empty};
+            _arguments = new string[]{ string.Empty };
         }
 
         /// <summary>
@@ -426,17 +426,11 @@ namespace ComponentLib
         /// <remarks>
         /// Can be used if you want to translate messages.
         /// </remarks>
-        public string OrgString
-        {
-            get { return _orgString; }
-        }
+        public string OrgString => _orgString;
 
         /// <summary>
         /// Arguments to string to format. First argument is parameter name.
         /// </summary>
-        public string[] Arguments
-        {
-            get { return _arguments; }
-        }
+        public string[] Arguments => _arguments;
     }
 }

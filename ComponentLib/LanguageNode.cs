@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="LanguageNode.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -52,10 +52,7 @@ namespace ComponentLib.Globalization
         /// <summary>
         /// All sub categories
         /// </summary>
-        public Dictionary<string, LanguageNode> SubNodes
-        {
-            get { return _subNodes; }
-        }
+        public Dictionary<string, LanguageNode> SubNodes => _subNodes;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="LanguageNode"/> class.
@@ -162,10 +159,7 @@ namespace ComponentLib.Globalization
         /// <summary>
         /// LCID to use if the specified or current LCID is not found.
         /// </summary>
-        public int DefaultLCID
-        {
-            get { return _defaultLCID; }
-        }
+        public int DefaultLCID => _defaultLCID;
 
         /// <summary>
         /// Number of translated texts in the specified language
@@ -179,10 +173,7 @@ namespace ComponentLib.Globalization
         /// </summary>
         /// <param name="name"></param>
         /// <returns></returns>
-        public static string EmptyValue(string name)
-        {
-            return string.Format("[{0}]", name);
-        }
+        public static string EmptyValue(string name) => $"[{name}]";
 
         /// <summary>
         /// Set default locale

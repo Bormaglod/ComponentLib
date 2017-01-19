@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="Cultures.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -25,7 +25,6 @@
 
 namespace ComponentLib.Globalization
 {
-    using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.Globalization;
@@ -48,8 +47,7 @@ namespace ComponentLib.Globalization
         
         public static void FillCountriesCollection(IList items)
         {
-            IList<Culture> l = CreateListCultures();
-            FillCountriesCollection(items, l);
+            FillCountriesCollection(items, CreateListCultures());
         }
         
         public static void FillCountriesCollection(IList items, IList<Culture> cultures)

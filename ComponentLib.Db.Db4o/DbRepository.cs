@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="BDCollection.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2016 Sergey Teplyashin. All rights reserved.
+// <copyright file="BDCollection.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -55,19 +55,13 @@ namespace ComponentLib.Db.Db4o
             ((Db4objects.Db4o.Ext.IExtObjectContainer)Container).Refresh(item, 1);
         }
         
-        protected IObjectContainer Container
-        {
-            get { return ((RepoDbCollections)Owner).Container; }
-        }
+        protected IObjectContainer Container => ((RepoDbCollections)Owner).Container;
         
         /// <summary>
         /// Метод возвращает список всех элементов данной коллекции без учета фильтров.
         /// </summary>
         /// <returns></returns>
-        protected override IEnumerable<T> GetItemsWithoutFilters()
-        {
-            return from T c in Container select c;
-        }
+        protected override IEnumerable<T> GetItemsWithoutFilters() => from T c in Container select c;
         
         protected override void AddInternal(object addedItem)
         {
@@ -94,9 +88,6 @@ namespace ComponentLib.Db.Db4o
             Container.Delete(removedItem);
         }
         
-        protected override bool GetReadOnly()
-        {
-            return false;
-        }
+        protected override bool GetReadOnly() => false;
     }
 }

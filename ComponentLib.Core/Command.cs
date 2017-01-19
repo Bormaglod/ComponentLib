@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="Command.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -28,7 +28,7 @@ namespace ComponentLib.Core
     using System;
     using System.Windows.Forms;
     using System.Xml;
-    using ComponentLib.Core.Xml;
+    using Xml;
     
     public class Command : IXmlData
     {
@@ -59,44 +59,23 @@ namespace ComponentLib.Core
             this.ShortcutKey = defaultShortcutKey;
         }
         
-        public bool IsSeparator
-        {
-            get { return string.IsNullOrEmpty(name); }
-        }
+        public bool IsSeparator => string.IsNullOrEmpty(name);
         
-        public string Category
-        {
-            get { return category; }
-        }
+        public string Category => category;
         
-        public string Name
-        {
-            get { return name; }
-        }
+        public string Name => name;
         
         public string ImageKey { get; set; }
         
-        public string DefaultImageKey
-        {
-            get { return defaultImageKey; }
-        }
+        public string DefaultImageKey => defaultImageKey;
         
         public Keys ShortcutKey { get; set; }
         
-        public Keys DefaultShortcutKey
-        {
-            get { return defaultShortcutKey; }
-        }
+        public Keys DefaultShortcutKey => defaultShortcutKey;
         
-        public string CommandValue
-        {
-            get { return string.Format("{0}.{1}", Category, Name); }
-        }
+        public string CommandValue => string.Format("{0}.{1}", Category, Name);
         
-        public override string ToString()
-        {
-            return CommandValue;
-        }
+        public override string ToString() => CommandValue;
 
         #region IXmlData interface implemented
         

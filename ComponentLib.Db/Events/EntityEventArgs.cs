@@ -1,9 +1,9 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="EntityEventArgs.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2015 Sergey Teplyashin. All rights reserved.
+// <copyright file="EntityEventArgs.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
-// <email>sergey-teplyashin@yandex.ru</email>
+// <email>sergio.teplyashin@gmail.com</email>
 // <license>
 //     This program is free software; you can redistribute it and/or modify
 //     it under the terms of the GNU General Public License as published by
@@ -39,20 +39,11 @@ namespace ComponentLib.Db
             action = act;
             dbState = state;
         }
-        
-        public Entity Entity
-        {
-            get { return e; }
-        }
-        
-        public ObjectAction Action
-        {
-            get { return action; }
-        }
-        
-        public DatabaseState State
-        {
-            get { return dbState; }
-        }
+
+        public Entity Entity => e;
+
+        public ObjectAction Action => action;
+
+        public DatabaseState State => dbState;
     }
 }

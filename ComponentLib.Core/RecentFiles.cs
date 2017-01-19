@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="RecentFiles.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -28,21 +28,17 @@ namespace ComponentLib.Core
     using System;
     using System.ComponentModel;
     using System.Drawing.Design;
-    using ComponentLib.Core.Design;
+    using Design;
     
     public class RecentFiles : Component
     {
-        string folder;
-        string fileName;
-        Environment.SpecialFolder target;
-        ObjectAccessCollection<File> files;
-        
+        string folder = "UserApplication";
+        string fileName = "RecentFiles.xml";
+        Environment.SpecialFolder target = Environment.SpecialFolder.ApplicationData;
+        ObjectAccessCollection<File> files = new ObjectAccessCollection<File>();
+
         public RecentFiles()
         {
-            target = Environment.SpecialFolder.ApplicationData;
-            folder = "UserApplication";
-            fileName = "RecentFiles.xml";
-            files = new ObjectAccessCollection<File>();
             LoadFromXml();
         }
         
@@ -50,10 +46,7 @@ namespace ComponentLib.Core
         
         [Editor(typeof(RecentFileEditor), typeof(UITypeEditor))]
         [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
-        public ObjectAccessCollection<File> Files
-        {
-            get { return files; }
-        }
+        public ObjectAccessCollection<File> Files => files;
         
         [RefreshProperties(RefreshProperties.All)]
         public Environment.SpecialFolder Target
@@ -109,10 +102,7 @@ namespace ComponentLib.Core
             }
         }
         
-        string FullFileName
-        {
-            get { return string.Join("\\", new string[] { Environment.GetFolderPath(target), folder, fileName }); }
-        }
+        string FullFileName => string.Join("\\", new string[] { Environment.GetFolderPath(target), folder, fileName });
         
         public void LoadFromXml()
         {

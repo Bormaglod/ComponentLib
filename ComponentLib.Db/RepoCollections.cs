@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="RepoCollections.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2015 Sergey Teplyashin. All rights reserved.
+// <copyright file="RepoCollections.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -29,20 +29,13 @@ namespace ComponentLib.Db
     using System.Collections.Generic;
     using System.Linq;
     using System.Xml;
-    using ComponentLib.Db.Repositories;
+    using Repositories;
     
     public class RepoCollections
     {
-        List<IPropertyRepository> tables;
-        Dictionary<string, object> parameters;
-        
-        public RepoCollections()
-        {
-            State = DatabaseState.Closed;
-            tables = new List<IPropertyRepository>();
-            parameters = new Dictionary<string, object>();
-        }
-        
+        readonly List<IPropertyRepository> tables = new List<IPropertyRepository>();
+        readonly Dictionary<string, object> parameters = new Dictionary<string, object>();
+
         public event EventHandler<EventArgs> BeforeClose;
         
         public event EventHandler<EventArgs> AfterClose;
@@ -54,28 +47,19 @@ namespace ComponentLib.Db
         /// <summary>
         /// Свойство возвращает состояние базы данных.
         /// </summary>
-        public DatabaseState State { get; internal set; }
-        
+        public DatabaseState State { get; internal set; } = DatabaseState.Closed;
+
         /// <summary>
         /// Список коллекций, хранящихся в базе данных.
         /// </summary>
-        public IEnumerable<IPropertyRepository> Collections
-        {
-            get { return tables; }
-        }
+        public IEnumerable<IPropertyRepository> Collections => tables;
         
         /// <summary>
         /// Свойство возвращает true, если все коллекции не содержат ни одного объекта.
         /// </summary>
-        public bool IsEmpty
-        {
-            get { return Collections.FirstOrDefault(c => !c.IsEmpty) == null; }
-        }
+        public bool IsEmpty => Collections.FirstOrDefault(c => !c.IsEmpty) == null;
         
-        public IRepository<T> Get<T>() where T: Entity
-        {
-            return Get(typeof(T)) as IRepository<T>;
-        }
+        public IRepository<T> Get<T>() where T: Entity => Get(typeof(T)) as IRepository<T>;
         
         public IPropertyRepository Get(Type content)
         {
@@ -87,25 +71,16 @@ namespace ComponentLib.Db
             return Collections.FirstOrDefault(c => c.ContentsType == content);
         }
         
-        public IPropertyRepository Get(string contentType)
-        {
-            return Collections.FirstOrDefault(c => c.ContentsType.Name == contentType);
-        }
+        public IPropertyRepository Get(string contentType) => Collections.FirstOrDefault(c => c.ContentsType.Name == contentType);
         
-        public IPropertyRepository Get(int id)
-        {
-            return Collections.FirstOrDefault(c => c.Identifier == id);
-        }
+        public IPropertyRepository Get(int id) => Collections.FirstOrDefault(c => c.Identifier == id);
         
         /// <summary>
         /// Возвращает коллекцию содержащую объекты такого-же типа как item.
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        public IPropertyRepository GetCollectionBelonge(Entity item)
-        {
-            return Collections.OfType<IBaseRepository>().FirstOrDefault(c => c.Belonge(item));
-        }
+        public IPropertyRepository GetCollectionBelonge(Entity item) => Collections.OfType<IBaseRepository>().FirstOrDefault(c => c.Belonge(item));
         
         /// <summary>
         /// Открывает базу данных.
@@ -118,7 +93,7 @@ namespace ComponentLib.Db
                 OpenDatabase();
                 DoAfterOpen();
             }
-            catch (Exception e)
+            catch
             {
                 Close();
             }
@@ -200,10 +175,7 @@ namespace ComponentLib.Db
             }
         }
         
-        public object GetParameter(string name)
-        {
-            return parameters.ContainsKey(name) ? parameters[name] : null;
-        }
+        public object GetParameter(string name) => parameters.ContainsKey(name) ? parameters[name] : null;
         
         protected void Close(bool clearParameters)
         {

@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="CommandImage.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -25,8 +25,6 @@
 
 namespace ComponentLib.Core
 {
-    using System;
-    
     public class CommandImage
     {
     	readonly int size;
@@ -39,20 +37,11 @@ namespace ComponentLib.Core
             this.category = category;
             this.size = size;
         }
-        
-        public string Name
-        {
-            get { return name; }
-        }
-        
-        public string Category
-        {
-            get { return category; }
-        }
-        
-        public int Size
-        {
-            get { return size; }
-        }
+
+        public string Name => name;
+
+        public string Category => category;
+
+        public int Size => size;
     }
 }

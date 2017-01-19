@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="ObjectAccessCollection.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -79,10 +79,7 @@ namespace ComponentLib.Core
         /// <para>Gets the object with lasted date/time access property.</para>
         /// <para>Свойство возвращает элемент (файл) коллекции имеющий самую позднюю дату/время доступа.</para>
         /// </summary>
-        public T Last
-        {
-            get { return Count == 0 ? default(T) : objects.Max(f => f); }
-        }
+        public T Last => Count == 0 ? default(T) : objects.Max(f => f);
         
         public T this[int index]
         {
@@ -102,18 +99,12 @@ namespace ComponentLib.Core
         /// <summary>
         /// Gets the number of elements contained in the ObjectAccessCollection.
         /// </summary>
-        public int Count
-        {
-            get { return count; }
-        }
+        public int Count => count;
         
         /// <summary>
         /// Gets a value indicating whether the ObjectAccessCollection is read-only.
         /// </summary>
-        public bool IsReadOnly
-        {
-            get { return false; }
-        }
+        public bool IsReadOnly => false;
         
         /// <summary>
         /// Метод добавляет элемент в коллекцию. Если количество элементов в коллекции до добавления равно максимальному
@@ -192,10 +183,7 @@ namespace ComponentLib.Core
         /// </summary>
         /// <param name="item">The object to locate in the ObjectAccessCollection.</param>
         /// <returns>true if item is found in the ObjectAccessCollection; otherwise, false.</returns>
-        public bool Contains(T item)
-        {
-            return objects.Contains(item);
-        }
+        public bool Contains(T item) => objects.Contains(item);
 
         /// <summary>
         /// Copies the elements of the ObjectAccessCollection to an Array, starting at a particular Array index.
@@ -243,29 +231,17 @@ namespace ComponentLib.Core
         /// Returns an enumerator that iterates through a collection.
         /// </summary>
         /// <returns>An IEnumerator object that can be used to iterate through the collection.</returns>
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         
         #endregion
         
         #region IList interface implemented
         
-        bool ICollection.IsSynchronized
-        {
-            get { return false; }
-        }
+        bool ICollection.IsSynchronized => false;
         
-        object ICollection.SyncRoot
-        {
-            get { return null; }
-        }
+        object ICollection.SyncRoot => null;
         
-        bool IList.IsFixedSize
-        {
-            get { return false; }
-        }
+        bool IList.IsFixedSize => false;
         
         void ICollection.CopyTo(Array array, int index)
         {
@@ -319,15 +295,9 @@ namespace ComponentLib.Core
             RemoveAt(index);
         }
         
-        int IList.IndexOf(object item)
-        {
-            return IndexOf((T)item);
-        }
+        int IList.IndexOf(object item) => IndexOf((T)item);
         
-        bool IList.Contains(object item)
-        {
-            return Contains((T)item);
-        }
+        bool IList.Contains(object item) => Contains((T)item);
         
         void IList.Insert(int index, object item)
         {

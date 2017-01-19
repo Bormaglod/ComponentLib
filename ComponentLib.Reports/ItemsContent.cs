@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="ItemsContent.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2016 Sergey Teplyashin. All rights reserved.
+//     Copyright (c) 2010-2017 Sergey Teplyashin. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -39,7 +39,7 @@ namespace ComponentLib.Reports
         public ItemsContent()
         {
             Helpers.FixupDataContext(this);
-            Loaded += ItemsContent_Loaded;
+            Loaded += (sender, e) => GenerateContent(ItemsPanel, ItemTemplate, ItemsSource);
         }
 
         public IEnumerable ItemsSource
@@ -60,11 +60,6 @@ namespace ComponentLib.Reports
             set { SetValue(ItemsPanelProperty, value); }
         }
         
-        void ItemsContent_Loaded(object sender, RoutedEventArgs e)
-        {
-            GenerateContent(ItemsPanel, ItemTemplate, ItemsSource);
-        }
-
         void GenerateContent(DataTemplate itemsPanel, DataTemplate itemTemplate, IEnumerable itemsSource)
         {
             Blocks.Clear();

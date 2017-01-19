@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="CommandCollection.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -25,21 +25,18 @@
 
 namespace ComponentLib.Core
 {
-    using System;
     using System.Collections;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Xml;
     
     public class CommandCollection : ICollection<Command>
     {
-        List<Command> commands;
+        List<Command> commands = new List<Command>();
         string application;
         string fileName;
         
         public CommandCollection(string app)
         {
-            commands = new List<Command>();
             application = app;
             fileName = FileNames.CommandsFile;
         }
@@ -53,16 +50,16 @@ namespace ComponentLib.Core
             
             if (string.IsNullOrEmpty(this.fileName) || !this.LoadFromXml(this.fileName))
             {
-                this.AddRange(defaultCommands);
+                AddRange(defaultCommands);
             }
             
             if (defaultCommands != null)
             {
                 foreach (Command cmd in defaultCommands)
                 {
-                    if (this.GetCommand(cmd.ToString()) == null)
+                    if (GetCommand(cmd.ToString()) == null)
                     {
-                        this.Add(cmd);
+                        Add(cmd);
                     }
                 }
             }
@@ -76,28 +73,19 @@ namespace ComponentLib.Core
         {
         }
         
-        public string Application
-        {
-            get { return application; }
-        }
+        public string Application => application;
         
         #region ICollection<Command> interface implemented
         
         /// <summary>
         /// Gets the number of elements contained in the ObjectAccessCollection.
         /// </summary>
-        public int Count
-        {
-            get { return commands.Count; }
-        }
+        public int Count => commands.Count;
         
         /// <summary>
         /// Gets a value indicating whether the ObjectAccessCollection is read-only.
         /// </summary>
-        public bool IsReadOnly
-        {
-            get { return false; }
-        }
+        public bool IsReadOnly => false;
         
         public void Add(Command item)
         {
@@ -107,42 +95,27 @@ namespace ComponentLib.Core
             }
         }
         
-        public bool Remove(Command item)
-        {
-            return commands.Remove(item);
-        }
+        public bool Remove(Command item) => commands.Remove(item);
         
         public void Clear()
         {
             commands.Clear();
         }
         
-        public bool Contains(Command item)
-        {
-            return commands.Contains(item);
-        }
+        public bool Contains(Command item) => commands.Contains(item);
         
         public void CopyTo(Command[] array, int arrayIndex)
         {
             commands.CopyTo(array, arrayIndex);
         }
         
-        public IEnumerator<Command> GetEnumerator()
-        {
-            return commands.GetEnumerator();
-        }
+        public IEnumerator<Command> GetEnumerator() => commands.GetEnumerator();
         
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         
         #endregion
         
-        public Command GetCommand(string fullName)
-        {
-            return commands.Find(f => f.ToString() == fullName);
-        }
+        public Command GetCommand(string fullName) => commands.Find(f => f.ToString() == fullName);
         
         public void AddRange(IEnumerable<Command> commands)
         {
@@ -159,7 +132,7 @@ namespace ComponentLib.Core
                 Clear();
                 XmlDocument doc = new XmlDocument();
                 doc.Load(fileName);
-                XmlNode nodeCommands = doc.SelectSingleNode(string.Format("/Commands/{0}", Application));
+                XmlNode nodeCommands = doc.SelectSingleNode($"/Commands/{Application}");
                 if (nodeCommands != null)
                 {
                     foreach (XmlNode node in nodeCommands.ChildNodes)

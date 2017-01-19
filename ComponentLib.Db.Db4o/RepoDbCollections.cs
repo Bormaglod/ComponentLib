@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="BDDatabase.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2016 Sergey Teplyashin. All rights reserved.
+// <copyright file="BDDatabase.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -38,27 +38,20 @@ namespace ComponentLib.Db.Db4o
     {
         IObjectContainer container;
         string fileName;
-        Stack<Session> sessions;
-        
+        readonly Stack<Session> sessions = new Stack<Session>();
+
         public RepoDbCollections()
         {
             fileName = string.Empty;
-            sessions = new Stack<Session>();
         }
         
         public event EventHandler<DatabaseConfigEventArgs> ConfigCreate;
         
         public event EventHandler<EventArgs> CreateDefaultRecords;
         
-        public IObjectContainer Container
-        {
-            get { return container; }
-        }
+        public IObjectContainer Container => container;
         
-        public string FileName
-        {
-            get { return fileName; }
-        }
+        public string FileName => fileName;
         
         public Session Session
         {

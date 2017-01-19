@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="RecentFileEditor.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
 // <license>
@@ -32,17 +32,8 @@ namespace ComponentLib.Core.Design
         public RecentFileEditor(Type type) : base(type)
         {
         }
-        
-        protected override string GetDisplayText(object value)
-        {
-            File file = value as File;
-            if (file != null)
-            {
-                return file.ShortFileName;
-            }
-            
-            return base.GetDisplayText(value);
-        }
+
+        protected override string GetDisplayText(object value) => (value as File)?.ShortFileName ?? base.GetDisplayText(value);
         
         protected override object CreateInstance(Type itemType)
         {
@@ -56,7 +47,5 @@ namespace ComponentLib.Core.Design
             
             return obj;
         }
-        
-        
     }
 }

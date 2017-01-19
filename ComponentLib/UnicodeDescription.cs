@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="UnicodeDescription" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -82,10 +82,7 @@ namespace ComponentLib.Text
             comments.Add(comment);
         }
         
-        public int Code
-        {
-            get { return code; }
-        }
+        public int Code => code;
         
         public string CodeUTF8
         {
@@ -95,37 +92,22 @@ namespace ComponentLib.Text
                 string res = string.Empty;
                 foreach (byte b in bytes)
                 {
-                    res += string.Format("0x{0} ", b.ToString("X2"));
+                    res += $"0x{b.ToString("X2")} ";
                 }
                 
-                return res;
+                return res.TrimEnd();
             }
         }
         
-        public string CodeUTF16
-        {
-            get { return string.Format("0x{0}", code.ToString("X4")); }
-        }
+        public string CodeUTF16 => $"0x{code.ToString("X4")}";
         
-        public string Symbol
-        {
-            get { return code == -1 ? string.Empty : char.ConvertFromUtf32(code); }
-        }
+        public string Symbol => code == -1 ? string.Empty : char.ConvertFromUtf32(code);
         
-        public string Name
-        {
-            get { return name; }
-        }
+        public string Name => name;
 
-        public IEnumerable<string> Aliases
-        {
-            get { return aliases; }
-        }
+        public IEnumerable<string> Aliases => aliases;
         
-        public IEnumerable<string> Comments
-        {
-            get { return comments; }
-        }
+        public IEnumerable<string> Comments => comments;
         
         public void Write(BinaryWriter writer)
         {
@@ -161,11 +143,8 @@ namespace ComponentLib.Text
             ReadCode(reader);
             ReadContent(reader);
         }
-        
-        public override string ToString()
-        {
-            return string.Format("U+{0} {1}", code.ToString("X4"), name);
-        }
+
+        public override string ToString() => $"U+{code.ToString("X4")} {name}";
         
         void MoveToNextCode(BinaryReader reader)
         {

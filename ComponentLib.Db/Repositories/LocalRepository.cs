@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="LocalRepository.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2015 Sergey Teplyashin. All rights reserved.
+// <copyright file="LocalRepository.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -50,10 +50,7 @@ namespace ComponentLib.Db.Repositories
         /// Метод возвращает список всех элементов данной коллекции без учета фильтров.
         /// </summary>
         /// <returns></returns>
-        protected override IEnumerable<T> GetItemsWithoutFilters()
-        {
-            return list;
-        }
+        protected override IEnumerable<T> GetItemsWithoutFilters() => list;
         
         protected sealed override void AddInternal(object addedItem)
         {

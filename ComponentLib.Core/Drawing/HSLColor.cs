@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="HSLColor.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -32,11 +32,12 @@ namespace ComponentLib.Drawing
     {
         public static HSLColor FromHSL(double hue, double saturation, double luminance)
         {
-            HSLColor c = new HSLColor();
-            c.Hue = hue;
-            c.Saturation = saturation;
-            c.Luminance = luminance;
-            return c;
+            return new HSLColor()
+            {
+                Hue = hue,
+                Saturation = saturation,
+                Luminance = luminance
+            };
         }
         
         public static implicit operator HSLColor(Color c)

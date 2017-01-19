@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="HSVColor.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -39,23 +39,17 @@ namespace ComponentLib.Core.Drawing
         /// <returns></returns>
         public static HSVColor FromHSV(float hue, float saturation, float value)
         {
-            HSVColor c = new HSVColor();
-            c.Hue = hue;
-            c.Saturation = saturation;
-            c.Value = value;
-            return c;
+            return new HSVColor()
+            {
+                Hue = hue,
+                Saturation = saturation,
+                Value = value
+            };
         }
         
-        public static HSVColor FromRGB(int R, int G, int B)
-        {
-            Color c = Color.FromArgb(R, G, B);
-            return (HSVColor)c;
-        }
+        public static HSVColor FromRGB(int R, int G, int B) => (HSVColor)Color.FromArgb(R, G, B);
         
-        public static HSVColor FromRGB(Color color)
-        {
-            return (HSVColor)color;
-        }
+        public static HSVColor FromRGB(Color color) => (HSVColor)color;
         
         public static implicit operator HSVColor(Color color)
         {
@@ -99,9 +93,4 @@ namespace ComponentLib.Core.Drawing
 
         public double Value { get; set; }
     }
-    
-    /*public static implicit operator Color(HSLColor cn)
-    {
-        
-    }*/
 }

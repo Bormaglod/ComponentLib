@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="CommandImageCollection.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -25,7 +25,6 @@
 
 namespace ComponentLib.Core
 {
-    using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.Drawing;
@@ -33,79 +32,52 @@ namespace ComponentLib.Core
     
     public class CommandImageCollection : ICollection<CommandImage>
     {
-        readonly List<string> categories;
-        readonly List<CommandImage> images;
-        
+        readonly List<string> categories = new List<string>();
+        readonly List<CommandImage> images = new List<CommandImage>();
+
         public CommandImageCollection()
         {
-            categories = new List<string>();
-            images = new List<CommandImage>();
             CreateDefaultList();
         }
         
-        public IEnumerable<string> Categories
-        {
-            get { return categories; }
-        }
+        public IEnumerable<string> Categories => categories;
         
-        public static Image GetImage(string name)
-        {
-            object obj = Resources.ResourceManager.GetObject(name, Resources.Culture);
-            return (Bitmap)obj;
-        }
+        public static Image GetImage(string name) => (Bitmap)Resources.ResourceManager.GetObject(name, Resources.Culture);
         
         #region ICollection<Command> interface implemented
         
         /// <summary>
         /// Gets the number of elements contained in the ObjectAccessCollection.
         /// </summary>
-        public int Count
-        {
-            get { return images.Count; }
-        }
+        public int Count => images.Count;
         
         /// <summary>
         /// Gets a value indicating whether the ObjectAccessCollection is read-only.
         /// </summary>
-        public bool IsReadOnly
-        {
-            get { return false; }
-        }
+        public bool IsReadOnly => false;
         
         public void Add(CommandImage item)
         {
             images.Add(item);
         }
         
-        public bool Remove(CommandImage item)
-        {
-            return images.Remove(item);
-        }
+        public bool Remove(CommandImage item) => images.Remove(item);
         
         public void Clear()
         {
             images.Clear();
         }
         
-        public bool Contains(CommandImage item)
-        {
-            return images.Contains(item);
-        }
+        public bool Contains(CommandImage item) => images.Contains(item);
         
         public void CopyTo(CommandImage[] array, int arrayIndex)
         {
             images.CopyTo(array, arrayIndex);
         }
         
-        public IEnumerator<CommandImage> GetEnumerator()
-        {
-            return images.GetEnumerator();
-        }
+        public IEnumerator<CommandImage> GetEnumerator() => images.GetEnumerator();
         
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         
         #endregion
         

@@ -1,5 +1,5 @@
-﻿// <copyright file="Repository.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2015 Sergey Teplyashin. All rights reserved.
+﻿// <copyright file="Repository.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -27,89 +27,61 @@ namespace ComponentLib.Db.Repositories
     using System;
     using System.Collections;
     using System.Collections.Generic;
-    #if DEBUG
-    using System.Diagnostics;
-    #endif
     using System.Linq;
     using System.Reflection;
     using System.Xml;
+    using Core;
     using Core.Xml;
     using DataModel;
     using Exceptions;
     
     public abstract class Repository<T>: IRepository<T> where T: Entity, new()
     {
-        string name;
-        int identifier;
-        RepoCollections owner;
-        IList<T> cache;
-        List<IFilter<T>> filters;
+        readonly string name;
+        readonly int identifier;
+        readonly RepoCollections owner;
+        readonly IList<T> cache = new List<T>();
+        readonly List<IFilter<T>> filters = new List<IFilter<T>>();
         
         protected Repository(RepoCollections repoCollections, int id, string repoName)
         {
             owner = repoCollections;
             name = repoName;
             identifier = id;
-            cache = new List<T>();
-            filters = new List<IFilter<T>>();
         }
         
-        public RepoCollections Owner
-        {
-            get { return owner; }
-        }
+        public RepoCollections Owner => owner;
         
         #region IPropertyRepository implemented
         
         /// <summary>
         /// Свойство возвращает true, если коллекция (с учетом фильтра) не содержит ни одного объекта.
         /// </summary>
-        public bool IsEmpty
-        {
-            get { return Items.FirstOrDefault() == null; }
-        }
+        public bool IsEmpty => Items.FirstOrDefault() == null;
         
         /// <summary>
         /// Свойство возвращает тип данных хранящихся в коллекции.
         /// </summary>
-        public Type ContentsType
-        {
-            get { return typeof(T); }
-        }
+        public Type ContentsType => typeof(T);
         
         /// <summary>
         /// Свойство возвращает количество объектов в коллекции.
         /// </summary>
-        public long Count
-        {
-            get { return Items.Count(); }
-        }
+        public long Count => Items.Count();
         
         /// <summary>
         /// Возвращает уникальный идентификатор коллекции.
         /// </summary>
-        public int Identifier
-        {
-            get { return identifier; }
-        }
+        public int Identifier => identifier;
         
         /// <summary>
         /// Возвращает наименование коллекции.
         /// </summary>
-        public string Name
-        {
-            get { return name; }
-        }
+        public string Name => name;
         
-        public bool ReadOnly
-        {
-            get { return GetReadOnly(); }
-        }
+        public bool ReadOnly => GetReadOnly();
         
-        IEnumerable IPropertyRepository.Objects
-        {
-            get { return Items; }
-        }
+        IEnumerable IPropertyRepository.Objects => Items;
         
         public IEnumerable<IPropertyRepository> Dependences
         {
@@ -140,20 +112,11 @@ namespace ComponentLib.Db.Repositories
         /// Возвращает список объектов коллекции. Список может быть ограничен с помощью установленного
         /// фильтра. Фильтр устанавливается методом <see cref="AddFilter"/>.
         /// </summary>
-        public IEnumerable<T> Items
-        {
-            get { return GetItems(); }
-        }
+        public IEnumerable<T> Items => GetItems();
         
-        public IEnumerable<T> ItemsWithoutFilters
-        {
-            get { return GetItemsWithoutFilters(); }
-        }
+        public IEnumerable<T> ItemsWithoutFilters => GetItemsWithoutFilters();
         
-        public IEnumerable<IFilter<T>> Filters
-        {
-            get { return filters; }
-        }
+        public IEnumerable<IFilter<T>> Filters => filters;
         
         public int AddFilter(IFilter<T> filter)
         {
@@ -171,26 +134,14 @@ namespace ComponentLib.Db.Repositories
             filters.Remove(filter);
         }
 
-        public IFilter<T> GetFilter(int index)
-        {
-            return filters[index];
-        }
+        public IFilter<T> GetFilter(int index) => filters[index];
 
-        public IFilter<T> GetFilter(Guid idFilter)
-        {
-            return filters.SingleOrDefault(x => x.Id == idFilter);
-        }
+        public IFilter<T> GetFilter(Guid idFilter) => filters.SingleOrDefault(x => x.Id == idFilter);
 
         /// <summary>
         /// Свойство возвращает объект, имеющий указанный ключ.
         /// </summary>
-        public T this[string key]
-        {
-            get
-            {
-                return string.IsNullOrEmpty(key) ? null : ItemsWithoutFilters.FirstOrDefault(item => item.Key() == key);
-            }
-        }
+        public T this[string key] => string.IsNullOrEmpty(key) ? null : ItemsWithoutFilters.FirstOrDefault(item => item.Key() == key);
         
         /// <summary>
         /// Метод создает новый элемент коллекции, но не записывает его в БД.
@@ -203,10 +154,7 @@ namespace ComponentLib.Db.Repositories
             return item;
         }
         
-        public bool ContainsKey(T item)
-        {
-            return ItemsWithoutFilters.FirstOrDefault(i => !i.Equals(item) && i.Key() == item.Key()) != null;
-        }
+        public bool ContainsKey(T item) => ItemsWithoutFilters.FirstOrDefault(i => !i.Equals(item) && i.Key() == item.Key()) != null;
         
         /// <summary>
         /// Метод создает новый элемент коллекции копируя данные из entity (если entity не null)
@@ -339,10 +287,7 @@ namespace ComponentLib.Db.Repositories
         /// <para>Метод вызывается до удаления объекта и до вызова ObjectRemoving.</para>
         /// </summary>
         /// <param name="removingItem">Удаляемый объект.</param>
-        public virtual bool CanObjectRemoving(Entity removingItem)
-        {
-            return true;
-        }
+        public virtual bool CanObjectRemoving(Entity removingItem) => true;
         
         /// <summary>
         /// Метод вызывается при удалении объекта из какой-либо коллекции. Вызов этого метода
@@ -367,10 +312,7 @@ namespace ComponentLib.Db.Repositories
         /// </summary>
         /// <param name="item">Проверяемый объект.</param>
         /// <returns>true, если объект item можно добавить в коллекцию.</returns>
-        public virtual bool Belonge(Entity item)
-        {
-            return item.GetType() == ContentsType;
-        }
+        public virtual bool Belonge(Entity item) => item.GetType() == ContentsType;
         
         public void Execute(Entity item, ObjectAction action)
         {
@@ -485,15 +427,9 @@ namespace ComponentLib.Db.Repositories
             CheckKey(item);
         }
         
-        public IEnumerator<T> GetEnumerator()
-        {
-            return Items.GetEnumerator();
-        }
+        public IEnumerator<T> GetEnumerator() => Items.GetEnumerator();
         
-        public override string ToString()
-        {
-            return Name;
-        }
+        public override string ToString() => Name;
         
         /// <summary>
         /// Метод очищает коллекцию, удаляя все данные содержащиеся в ней.

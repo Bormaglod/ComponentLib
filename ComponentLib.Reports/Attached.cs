@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="Attached.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2016 Sergey Teplyashin. All rights reserved.
+//     Copyright (c) 2010-2017 Sergey Teplyashin. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -33,26 +33,23 @@ namespace ComponentLib.Reports
         static readonly DependencyProperty IsItemsHostProperty = DependencyProperty.RegisterAttached("IsItemsHost", typeof(bool), typeof(Attached), new FrameworkPropertyMetadata(false, FrameworkPropertyMetadataOptions.NotDataBindable, OnIsItemsHostChanged));
         static readonly DependencyProperty ItemsHostProperty = DependencyProperty.RegisterAttached("ItemsHost", typeof(FrameworkContentElement), typeof(Attached), new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.NotDataBindable));
 
-        public static bool GetIsItemsHost(DependencyObject target)
-        {
-            return (bool)target.GetValue(IsItemsHostProperty);
-        }
+        public static bool GetIsItemsHost(DependencyObject target) => (bool)target.GetValue(IsItemsHostProperty);
 
         public static void SetIsItemsHost(DependencyObject target, bool value)
         {
             target.SetValue(IsItemsHostProperty, value);
         }
         
-        public static FrameworkContentElement GetItemsHost(DependencyObject dp)
-        {
-            return (FrameworkContentElement)dp.GetValue(ItemsHostProperty);
-        }
+        public static FrameworkContentElement GetItemsHost(DependencyObject dp) => (FrameworkContentElement)dp.GetValue(ItemsHostProperty);
 
         static void SetItemsHost(FrameworkContentElement element)
         {
             FrameworkContentElement parent = element;
             while (parent.Parent != null)
+            {
                 parent = (FrameworkContentElement)parent.Parent;
+            }
+
             parent.SetValue(ItemsHostProperty, element);
         }
 
@@ -62,9 +59,13 @@ namespace ComponentLib.Reports
             {
                 FrameworkContentElement element = (FrameworkContentElement)d;
                 if (element.IsInitialized)
+                {
                     SetItemsHost(element);
+                }
                 else
+                {
                     element.Initialized += ItemsHost_Initialized;
+                }
             }
         }
 

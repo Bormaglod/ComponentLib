@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Entity.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2015 Sergey Teplyashin. All rights reserved.
+// <copyright file="Entity.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -41,7 +41,7 @@ namespace ComponentLib.Db
         {
             foreach (PropertyInfo pi in GetType().GetProperties().Where(p => p.PropertyType == typeof(DbImage)))
             {
-                pi.SetValue(this, new DbImage(), null);
+                pi.SetValue(this, DbImage.Create(), null);
             }
         }
         
@@ -69,7 +69,7 @@ namespace ComponentLib.Db
             
             foreach (PropertyInfo p in GetType().GetProperties())
             {
-                if (p.PropertyType.GetInterface("IList") != null)
+                if (p.PropertyType.GetInterface(nameof(IList)) != null)
                 {
                     IList source = (IList)p.GetValue(this, null);
                     IList dest = (IList)p.GetValue(entity, null);
@@ -122,15 +122,9 @@ namespace ComponentLib.Db
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         
-        object CreateCopyObject(object source, bool deep)
-        {
-            return CreateCopyObject(source.GetType(), source, deep);
-        }
+        object CreateCopyObject(object source, bool deep) => CreateCopyObject(source.GetType(), source, deep);
         
-        object CreateCopyObject(PropertyInfo source, bool deep)
-        {
-            return CreateCopyObject(source.PropertyType, source.GetValue(this, null), deep);
-        }
+        object CreateCopyObject(PropertyInfo source, bool deep) => CreateCopyObject(source.PropertyType, source.GetValue(this, null), deep);
         
         object CreateCopyObject(Type sourceType, object source, bool deep)
         {

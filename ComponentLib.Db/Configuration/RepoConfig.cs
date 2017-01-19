@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file=RepoConfig.cs company="NIIAR">
-//     Copyright (c) 2016 АО ГНЦ "НИИАР". All rights reserved.
+// <copyright file=RepoConfig.cs company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -25,8 +25,6 @@
 
 namespace ComponentLib.Db.Configuration
 {
-    using System;
-    
     public static class RepoConfig
     {
         public static string ImagesLocation { get; set; }

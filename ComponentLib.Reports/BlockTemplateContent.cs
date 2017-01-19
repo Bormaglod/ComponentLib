@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="BlockTemplateContent.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2016 Sergey Teplyashin. All rights reserved.
+//     Copyright (c) 2010-2017 Sergey Teplyashin. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -42,15 +42,8 @@ namespace ComponentLib.Reports
         public BlockTemplateContent()
         {
             Helpers.FixupDataContext(this);
-            Loaded += BlockTemplateContent_Loaded;
+            Loaded += (sender, e) => GenerateContent(Template);
         }
-
-
-        private void BlockTemplateContent_Loaded(object sender, RoutedEventArgs e)
-        {
-            GenerateContent(Template);
-        }
-
 
         private void GenerateContent(DataTemplate template)
         {
@@ -66,7 +59,6 @@ namespace ComponentLib.Reports
         {
             GenerateContent(dataTemplate);
         }
-
 
         private static void OnTemplateChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {

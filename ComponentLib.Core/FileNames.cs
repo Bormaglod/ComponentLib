@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="FileNames.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -37,8 +37,8 @@ namespace ComponentLib.Core
         public static string GetCommandsFile()
         {
             #if DEBUG
-            string appDir = string.Format(FileNames.ApplicationDir, string.Format(@"C:\Documents and Settings\{0}\Application Data", Environment.UserName));
-            string fileName = string.Format(FileNames.CommandsFile, string.Format(@"C:\Documents and Settings\{0}\Application Data", Environment.UserName));
+            string appDir = string.Format(FileNames.ApplicationDir, $"C:\\Documents and Settings\\{Environment.UserName}\\Application Data");
+            string fileName = string.Format(FileNames.CommandsFile, $"C:\\Documents and Settings\\{Environment.UserName}\\Application Data");
             #else
             string appDir = string.Format(FileNames.ApplicationDir, Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
             string fileName = string.Format(FileNames.CommandsFile, Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
@@ -55,8 +55,8 @@ namespace ComponentLib.Core
         public static string GetToolbarsFile()
         {
             #if DEBUG
-            string appDir = string.Format(FileNames.ApplicationDir, string.Format(@"C:\Documents and Settings\{0}\Application Data", Environment.UserName));
-            string fileName = string.Format(FileNames.ToolBarsFile, string.Format(@"C:\Documents and Settings\{0}\Application Data", Environment.UserName));
+            string appDir = string.Format(FileNames.ApplicationDir, $"C:\\Documents and Settings\\{Environment.UserName}\\Application Data");
+            string fileName = string.Format(FileNames.ToolBarsFile, $"C:\\Documents and Settings\\{Environment.UserName}\\Application Data");
             #else
             string appDir = string.Format(FileNames.ApplicationDir, Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));
             string fileName = string.Format(FileNames.ToolBarsFile, Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData));

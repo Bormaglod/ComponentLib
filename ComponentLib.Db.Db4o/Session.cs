@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Session.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2016 Sergey Teplyashin. All rights reserved.
+// <copyright file="Session.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -34,11 +34,10 @@ namespace ComponentLib.Db.Db4o
     {
         bool disposed;
         readonly RepoDbCollections collections;
-        Queue<Tuple<Entity, ObjectAction>> objects;
-        
+        readonly Queue<Tuple<Entity, ObjectAction>> objects = new Queue<Tuple<Entity, ObjectAction>>();
+
         public Session(RepoDbCollections repoCollections)
         {
-            objects = new Queue<Tuple<Entity, ObjectAction>>();
             collections = repoCollections;
             repoCollections.Session = this;
             foreach (IBaseRepository c in collections.Collections.OfType<IBaseRepository>())

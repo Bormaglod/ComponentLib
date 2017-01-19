@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="ToolbarCommand.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -25,7 +25,6 @@
 
 namespace ComponentLib.Core
 {
-    using System;
     using System.Windows.Forms;
     
     public class ToolbarCommand
@@ -60,26 +59,14 @@ namespace ComponentLib.Core
             }
         }
         
-        public Command Command
-        {
-            get { return command; }
-        }
+        public Command Command => command;
         
         public int Position { get; set; }
         
-        public bool ViewImage
-        {
-            get { return displayStyle == ToolStripItemDisplayStyle.Image || displayStyle == ToolStripItemDisplayStyle.ImageAndText; }
-        }
+        public bool ViewImage => displayStyle == ToolStripItemDisplayStyle.Image || displayStyle == ToolStripItemDisplayStyle.ImageAndText;
         
-        public bool ViewText
-        {
-            get { return displayStyle == ToolStripItemDisplayStyle.Text || displayStyle == ToolStripItemDisplayStyle.ImageAndText; }
-        }
+        public bool ViewText => displayStyle == ToolStripItemDisplayStyle.Text || displayStyle == ToolStripItemDisplayStyle.ImageAndText;
         
-        public ToolStripItemDisplayStyle DisplayStyle
-        {
-            get { return displayStyle; }
-        }
+        public ToolStripItemDisplayStyle DisplayStyle => displayStyle;
     }
 }

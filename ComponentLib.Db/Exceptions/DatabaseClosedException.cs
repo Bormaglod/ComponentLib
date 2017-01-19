@@ -1,9 +1,9 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="DatabaseClosedException.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2014 Sergey Teplyashin. All rights reserved.
+// <copyright file="DatabaseClosedException.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
-// <email>sergey-teplyashin@yandex.ru</email>
+// <email>sergio.teplyashin@gmail.com</email>
 // <license>
 //     This program is free software; you can redistribute it and/or modify
 //     it under the terms of the GNU General Public License as published by

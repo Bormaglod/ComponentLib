@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="DependenceAttribute.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2015 Sergey Teplyashin. All rights reserved.
+// <copyright file="DependenceAttribute.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -44,10 +44,7 @@ namespace ComponentLib.Db.DataModel
         {
             this.action = action;
         }
-        
-        public DependenceAction Action
-        {
-            get { return action; }
-        }
+
+        public DependenceAction Action => action;
     }
 }

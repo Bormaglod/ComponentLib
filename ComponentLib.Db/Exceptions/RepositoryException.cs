@@ -1,9 +1,9 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="RepositoryException.cs" company="Sergey Teplyashin">
-//     Copyright (c) 2010-2015 Sergey Teplyashin. All rights reserved.
+// <copyright file="RepositoryException.cs" company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
-// <email>sergey-teplyashin@yandex.ru</email>
+// <email>sergio.teplyashin@gmail.com</email>
 // <license>
 //     This program is free software; you can redistribute it and/or modify
 //     it under the terms of the GNU General Public License as published by
@@ -42,7 +42,7 @@ namespace ComponentLib.Db.Exceptions
     
     public class RepositoryException : Exception
     {
-        Entity _entity;
+        readonly Entity _entity;
         readonly int _code;
         
         public RepositoryException(string message, int code, Entity entity) : base(message)
@@ -50,15 +50,9 @@ namespace ComponentLib.Db.Exceptions
             _entity = entity;
             _code = code;
         }
-        
-        public Entity Entity
-        {
-            get { return _entity; }
-        }
-        
-        public int Code
-        {
-            get { return _code; }
-        }
+
+        public Entity Entity => _entity;
+
+        public int Code => _code;
     }
 }

@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="EmptyLanguageNode.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -74,10 +74,7 @@ namespace ComponentLib.Globalization
         /// lang["Naem"] // => "[Naem]" since it's missing
         /// </code>
         /// </example>
-        public override string this[string textName]
-        {
-            get { return EmptyValue(textName); }
-        }
+        public override string this[string textName] => EmptyValue(textName);
 
         /// <summary>
         /// Get a localized text string
@@ -91,38 +88,26 @@ namespace ComponentLib.Globalization
         /// lang["Naem"] // => "[Naem]" since it's missing
         /// </code>
         /// </example>
-        public override string this[string textName, int lcid]
-        {
-            get { return EmptyValue(textName); }
-        }
+        public override string this[string textName, int lcid] => EmptyValue(textName);
 
         /// <summary>
         /// Number languages
         /// </summary>
-        public override int Count
-        {
-            get { return 0; }
-        }
+        public override int Count => 0;
 
         /// <summary>
         /// Number of translated texts in the specified language
         /// </summary>
         /// <param name="lcid"></param>
         /// <returns></returns>
-        public override int GetTextCount(int lcid)
-        {
-            return 0;
-        }
+        public override int GetTextCount(int lcid) => 0;
 
         /// <summary>
         /// Determine if a category contains a specific language.
         /// </summary>
         /// <param name="lcid"></param>
         /// <returns></returns>
-        public override bool Contains(int lcid)
-        {
-            return false;
-        }
+        public override bool Contains(int lcid) => false;
 
         /// <summary>Unimplemented function to fulfill the requirements of <see cref="LanguageNode"/> base class</summary>
         /// <param name="name">The name to add</param>

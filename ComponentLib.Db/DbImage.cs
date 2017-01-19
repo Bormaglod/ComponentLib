@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file=DbImage.cs company="NIIAR">
-//     Copyright (c) 2016 АО ГНЦ "НИИАР". All rights reserved.
+// <copyright file=DbImage.cs company="Тепляшин Сергей Васильевич">
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -27,16 +27,13 @@ namespace ComponentLib.Db
 {
     using System;
     using System.IO;
-    using ComponentLib.Db.Configuration;
+    using Configuration;
     
     public class DbImage
     {
         string file;
         
-        public string FileName
-        {
-            get { return string.Format(@"{0}\{1}", RepoConfig.ImagesLocation, file); }
-        }
+        public string FileName => $"{RepoConfig.ImagesLocation}\\{file}";
         
         public void LoadFromFile(string source)
         {
@@ -58,7 +55,7 @@ namespace ComponentLib.Db
                 Random rnd = new Random(DateTime.Now.Millisecond);
                 do
                 {
-                    file = string.Format(@"Image{0}{1}", rnd.Next(), ext);
+                    file = $"Image{rnd.Next()}{ext}";
                 }
                 while (File.Exists(FileName));
                 
@@ -72,15 +69,9 @@ namespace ComponentLib.Db
             file = string.Empty;
         }
         
-        public override string ToString()
-        {
-            return string.Format("[DbImage File={0}]", FileName);
-        }
+        public override string ToString() => $"[DbImage File={FileName}]";
 
-        public static DbImage Create()
-        {
-            return new DbImage();
-        }
+        public static DbImage Create() => new DbImage();
         
         public static DbImage Create(string fileName)
         {

@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="XmlAttributeElement.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -25,8 +25,6 @@
 
 namespace ComponentLib.Core.Xml
 {
-    using System;
-    
     public class XmlAttributeElement
     {
         readonly bool check;
@@ -50,9 +48,6 @@ namespace ComponentLib.Core.Xml
         
         public string CheckValue { get; set; }
         
-        public bool Checked
-        {
-            get { return check && (string.IsNullOrEmpty(Value) || Value == CheckValue); }
-        }
+        public bool Checked => check && (string.IsNullOrEmpty(Value) || Value == CheckValue);
     }
 }

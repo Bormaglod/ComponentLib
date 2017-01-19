@@ -1,6 +1,6 @@
 ﻿//-----------------------------------------------------------------------
 // <copyright file="ToolbarCommandCollection.cs" company="Тепляшин Сергей Васильевич">
-//     Copyright (c) 2010-2016 Тепляшин Сергей Васильевич. All rights reserved.
+//     Copyright (c) 2010-2017 Тепляшин Сергей Васильевич. All rights reserved.
 // </copyright>
 // <author>Тепляшин Сергей Васильевич</author>
 // <email>sergio.teplyashin@gmail.com</email>
@@ -25,12 +25,11 @@
 
 namespace ComponentLib.Core
 {
-    using System;
     using System.Collections;
     using System.Collections.Generic;
     using System.Linq;
     using System.Xml;
-    using ComponentLib.Core.Xml;
+    using Xml;
     
     public class ToolbarCommandCollection : ICollection<ToolbarCommand>
     {
@@ -56,9 +55,9 @@ namespace ComponentLib.Core
                 this.fileName = FileNames.GetToolbarsFile();
             }
             
-            if (string.IsNullOrEmpty(this.fileName) || !this.LoadFromXml(this.fileName))
+            if (string.IsNullOrEmpty(this.fileName) || !LoadFromXml(this.fileName))
             {
-                this.AddRange(defaultCommands);
+                AddRange(defaultCommands);
             }
         }
         
@@ -75,33 +74,21 @@ namespace ComponentLib.Core
             get { return application; }
         }
         
-        public string ToolbarName
-        {
-            get { return toolbarName; }
-        }
+        public string ToolbarName => toolbarName;
         
-        public CommandCollection GlobalCommands
-        {
-            get { return globalCommands; }
-        }
+        public CommandCollection GlobalCommands => globalCommands;
         
         #region ICollection<Command> interface implemented
         
         /// <summary>
         /// Gets the number of elements contained in the ObjectAccessCollection.
         /// </summary>
-        public int Count
-        {
-            get { return commands.Count; }
-        }
+        public int Count => commands.Count;
         
         /// <summary>
         /// Gets a value indicating whether the ObjectAccessCollection is read-only.
         /// </summary>
-        public bool IsReadOnly
-        {
-            get { return false; }
-        }
+        public bool IsReadOnly => false;
         
         public void Add(ToolbarCommand cmd)
         {
@@ -111,42 +98,27 @@ namespace ComponentLib.Core
             }
         }
         
-        public bool Remove(ToolbarCommand item)
-        {
-            return commands.Remove(item);
-        }
+        public bool Remove(ToolbarCommand item) => commands.Remove(item);
         
         public void Clear()
         {
             commands.Clear();
         }
         
-        public bool Contains(ToolbarCommand command)
-        {
-            return commands.Contains(command);
-        }
+        public bool Contains(ToolbarCommand command) => commands.Contains(command);
         
         public void CopyTo(ToolbarCommand[] array, int arrayIndex)
         {
             commands.CopyTo(array, arrayIndex);
         }
         
-        public IEnumerator<ToolbarCommand> GetEnumerator()
-        {
-            return commands.GetEnumerator();
-        }
+        public IEnumerator<ToolbarCommand> GetEnumerator() => commands.GetEnumerator();
         
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         
         #endregion
         
-        public bool ContainsCommand(Command command)
-        {
-            return commands.FirstOrDefault(x => x.Command == command) != null;
-        }
+        public bool ContainsCommand(Command command) => commands.FirstOrDefault(x => x.Command == command) != null;
         
         public IEnumerable<ToolbarCommand> Commands
         {
